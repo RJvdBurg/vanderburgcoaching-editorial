@@ -595,6 +595,48 @@ h1,h2,h3,h4,.hero-bg h1,.hero h1,.sec-head h2,.cta-banner h2,.help-card h3,.imgb
 /* Wordmark-logo in de header is breder: eerder naar hamburger zodat de nav niet overloopt */
 @media(max-width:1024px){.nav-links,.nav .cta{display:none}.hamburger{display:flex}}
 
+/* ═══════════════════════════════════════════════════════════════════
+   EXACT MERK-PALET (brand board) + pill-buttons
+   #0B2F2F diep teal · #214846 vergrijsd groen · #5F726C natuurlijk groen
+   #CBB89F warm beige · #F8F5ED licht crème
+   ═══════════════════════════════════════════════════════════════════ */
+:root{
+  --purple:#0B2F2F; --purple-600:#06201F; --purple-900:#041413; --purple-50:#E8EEEA;
+  --green2:#214846; --teal:#5F726C; --teal-50:#E8ECE9;
+  --beige:#CBB89F; --gold:#CBB89F;
+  --n0:#FFFDF7; --n50:#F8F5ED; --n100:#ECE7DB; --n200:#CBB89F;
+  --grad:linear-gradient(120deg,#0B2F2F,#214846);
+  --grad-soft:linear-gradient(180deg,#F8F5ED,#EFEBE0);
+}
+html,body{background:#F8F5ED}
+/* labels: diep teal op licht, beige op donker */
+.label,.sec-head .label,.imgband-txt .label{color:var(--purple)}
+.hero-bg .label,.hero .label,.cta-banner .label,.section.purple-tint .label,.site-footer .label{color:var(--beige)}
+.grad-text{-webkit-text-fill-color:var(--purple);color:var(--purple)}
+.nav-links a.active,.nav-links a:hover{color:#fff;border-bottom-color:var(--beige)}
+.quote{border-left-color:var(--beige);color:var(--purple)}
+.wa-float{background:var(--green2)} .wa-float:hover{background:var(--purple)}
+.section.tint{background:#EFE8DA}            /* lichte warme tint i.p.v. vol beige */
+/* icon-ringen + lijn-iconen: warm beige (exact) */
+.card .ico,.help-ico,.contact-item .ci{border-color:var(--beige)}
+.card .ico .ico-svg,.help-ico .ico-svg,.contact-item .ci .ico-svg{stroke:var(--beige)!important}
+
+/* ── Pill-buttons met pijl (brand board) ───────────────────────────── */
+.btn{border-radius:999px;min-height:52px;padding:0 1.7rem;gap:.7rem}
+.btn-cta,.btn-primary,.site-header .cta.btn-cta{background:var(--beige);color:var(--purple);border:1.5px solid var(--beige)}
+.btn-cta:hover,.btn-primary:hover,.site-header .cta.btn-cta:hover{background:#D8C7AE;border-color:#D8C7AE;color:var(--purple)}
+.btn-ghost{background:transparent;border:1.5px solid var(--beige);color:var(--purple)}
+.btn-ghost:hover{background:rgba(203,184,159,.14);color:var(--purple)}
+.hero-bg .btn-ghost,.hero .btn-ghost,.cta-banner .btn-ghost,.btn-white{color:var(--n50);border:1.5px solid var(--beige);background:transparent}
+.hero-bg .btn-ghost:hover,.hero .btn-ghost:hover,.cta-banner .btn-ghost:hover,.btn-white:hover{background:rgba(203,184,159,.16);color:var(--n50)}
+.btn-cta::after,.btn-primary::after,.btn-ghost::after,.btn-white::after{content:"→";font-size:1.05em;line-height:1;margin-left:.15em}
+
+/* ── Typografie-spec (brand) ───────────────────────────────────────── */
+.btn{font-family:var(--fbody);font-weight:600}          /* knoppen: Montserrat 600 */
+.quote{font-family:var(--fdisplay);font-style:italic;font-weight:400}   /* quotes: Playfair Italic 400 */
+.nav-links a{font-weight:500}                            /* navigatie: Montserrat 500 */
+.label,.sec-head .label,.hero-bg .label,.imgband-txt .label{font-family:var(--fbody);font-weight:600}
+
 </style>
 <!-- CMS:THEMECSS:END -->
 </head>
