@@ -623,6 +623,14 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 .nav-links a{white-space:nowrap}
 @media(min-width:1025px) and (max-width:1200px){.nav-links{gap:.85rem}.nav-links a{font-size:.68rem}}
 
+/* ── Header: groot gestapeld logo (hoger dan het menu), overloopt de balk ─ */
+.site-header{overflow:visible}
+.nav{height:auto;min-height:118px;align-items:center}
+.nav .logo img{height:104px}
+.hero{padding-top:calc(118px + clamp(2rem,6vw,4rem))!important}
+@media(max-width:1024px){.nav{min-height:86px}.nav .logo img{height:68px}
+  .hero{padding-top:calc(86px + clamp(2rem,6vw,4rem))!important}}
+
 </style>
 <!-- CMS:THEMECSS:END -->
 </head>
