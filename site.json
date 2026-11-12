@@ -17,38 +17,44 @@
       "label": "Over Deborah"
     },
     {
-      "href": "diensten.html",
-      "label": "Diensten",
+      "href": "aanbod.html",
+      "label": "Aanbod",
       "sub": [
         {
-          "href": "relatietherapie.html",
-          "label": "Relatietherapie"
+          "href": "aanbod.html",
+          "label": "Aanbod"
         },
         {
-          "href": "eft-relatietherapie.html",
-          "label": "EFT-relatietherapie"
+          "href": "relaties.html",
+          "label": "Relaties"
         },
         {
-          "href": "individuele-coaching.html",
-          "label": "Individuele Coaching"
+          "href": "coaching.html",
+          "label": "Coaching"
         },
         {
-          "href": "v-cirkel-coaching.html",
-          "label": "V-Cirkel Coaching"
-        },
-        {
-          "href": "burn-out-stress-coaching.html",
-          "label": "Burn-out & Stress Coaching"
-        },
-        {
-          "href": "kennismaking.html",
-          "label": "Kennismaking"
+          "href": "training.html",
+          "label": "Training"
         }
       ]
     },
     {
-      "href": "tarieven.html",
-      "label": "Tarieven"
+      "href": "werkwijze.html",
+      "label": "Werkwijze",
+      "sub": [
+        {
+          "href": "werkwijze.html",
+          "label": "Werkwijze"
+        },
+        {
+          "href": "tarieven.html",
+          "label": "Tarieven"
+        }
+      ]
+    },
+    {
+      "href": "artikelen.html",
+      "label": "Artikelen"
     },
     {
       "href": "contact.html",
@@ -70,12 +76,16 @@
             "label": "Over Deborah"
           },
           {
-            "href": "diensten.html",
-            "label": "Diensten"
+            "href": "aanbod.html",
+            "label": "Aanbod"
           },
           {
-            "href": "tarieven.html",
-            "label": "Tarieven"
+            "href": "werkwijze.html",
+            "label": "Werkwijze"
+          },
+          {
+            "href": "artikelen.html",
+            "label": "Artikelen"
           },
           {
             "href": "contact.html",
@@ -84,31 +94,23 @@
         ]
       },
       {
-        "title": "Diensten",
+        "title": "Aanbod",
         "links": [
           {
-            "href": "relatietherapie.html",
-            "label": "Relatietherapie"
+            "href": "relaties.html",
+            "label": "Relaties"
           },
           {
-            "href": "eft-relatietherapie.html",
-            "label": "EFT-relatietherapie"
+            "href": "coaching.html",
+            "label": "Coaching"
           },
           {
-            "href": "v-cirkel-coaching.html",
-            "label": "V-Cirkel Coaching"
+            "href": "training.html",
+            "label": "Training"
           },
           {
-            "href": "individuele-coaching.html",
-            "label": "Individuele Coaching"
-          },
-          {
-            "href": "burn-out-stress-coaching.html",
-            "label": "Burn-out & Stress Coaching"
-          },
-          {
-            "href": "werkgebied.html",
-            "label": "Werkgebied"
+            "href": "tarieven.html",
+            "label": "Tarieven"
           }
         ]
       }
