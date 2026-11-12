@@ -127,17 +127,17 @@
 <!-- CMS:JSONLD:START --><!-- CMS:JSONLD:END -->
 <!-- CMS:THEMECSS:START -->
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Slab:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 :root{
-  --grad:linear-gradient(135deg,#f7588e 0%,#7b5ea7 45%,#4ab9d8 100%);
-  --grad-soft:linear-gradient(135deg,rgba(247,88,142,.10),rgba(123,94,167,.10) 45%,rgba(74,185,216,.10));
-  --purple:#3E2E6D;--purple-600:#342560;--purple-50:#f3f1f9;--purple-900:#110b22;
-  --pink:#f7588e;--pink-hover:#e8407a;--teal:#4ab9d8;--teal-50:#f0fafc;--teal-700:#136882;
-  --n0:#fff;--n50:#f8f8f8;--n100:#f0f0f0;--n200:#e0e0e0;--n400:#a8a8a8;--n500:#7a7a7a;--n700:#444;
-  --fdisplay:'Roboto Slab',Georgia,serif;--fbody:'Roboto','Helvetica Neue',Arial,sans-serif;
-  --maxw:1140px;--px:clamp(1rem,5vw,2rem);--section-py:clamp(3.5rem,8vw,5.5rem);
-  --shadow-sm:0 2px 8px rgba(17,24,39,.08);--shadow-md:0 4px 20px rgba(17,24,39,.10);--shadow-lg:0 8px 40px rgba(62,46,109,.12);
-  --carousel-caption-gap:.5rem;
+  --grad:linear-gradient(135deg,#0D3B3A 0%,#13524F 45%,#5F9E9A 100%);
+  --grad-soft:linear-gradient(135deg,rgba(13,59,58,.06),rgba(95,158,154,.08) 45%,rgba(215,200,190,.12));
+  --purple:#0D3B3A;--purple-600:#082F2E;--purple-50:#EAF1F0;--purple-900:#061F1E;
+  --pink:#0D3B3A;--pink-hover:#082F2E;--teal:#5F9E9A;--teal-50:#EEF5F4;--teal-700:#3F726E;
+  --n0:#fff;--n50:#F5EFE9;--n100:#ECE3DA;--n200:#D7C8BE;--n400:#A79A8F;--n500:#6B675F;--n700:#1F1F1F;
+  --fdisplay:'Playfair Display',Georgia,serif;--fbody:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  --maxw:1200px;--px:clamp(1rem,5vw,2rem);--section-py:clamp(4.5rem,8vw,7rem);
+  --shadow-sm:0 1px 3px rgba(31,31,31,.06);--shadow-md:0 4px 18px rgba(13,59,58,.08);--shadow-lg:0 10px 40px rgba(13,59,58,.10);
+  --carousel-caption-gap:.6rem;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
@@ -190,7 +190,7 @@ img{max-width:100%;display:block}
 .nav-links li.has-sub>a::after{content:"▾";font-size:.7em;margin-left:5px;opacity:.55;vertical-align:middle}
 .submenu{position:absolute;top:100%;left:50%;transform:translateX(-50%);padding-top:14px;min-width:250px;
   opacity:0;visibility:hidden;transition:opacity .2s;z-index:310}
-.submenu-inner{list-style:none;background:#fff;border:1px solid var(--n100);border-radius:14px;box-shadow:var(--shadow-lg);padding:8px}
+.submenu-inner{list-style:none;background:#fff;border:1px solid var(--n100);border-radius:2px;box-shadow:var(--shadow-lg);padding:8px}
 .submenu-inner li a{display:block;padding:10px 16px;border-radius:9px;font-size:.88rem;font-weight:500;color:var(--n700);border-bottom:none}
 .submenu-inner li a:hover{background:var(--purple-50);color:var(--purple);border-bottom:none}
 .nav-links li.has-sub:hover .submenu,.nav-links li.has-sub:focus-within .submenu{opacity:1;visibility:visible}
@@ -234,7 +234,7 @@ img{max-width:100%;display:block}
 .hero-bg .lead{margin-bottom:2rem;max-width:560px}
 .hero-bg .hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
 .help-card{position:absolute;right:var(--px);bottom:var(--px);width:min(380px,42%);z-index:2;
-  background:#fff;border-radius:18px;box-shadow:var(--shadow-xl);padding:1.5rem 1.6rem}
+  background:#fff;border-radius:2px;box-shadow:var(--shadow-xl);padding:1.5rem 1.6rem}
 .help-card h3{color:var(--purple);font-size:1.3rem;margin-bottom:.5rem}
 .help-card p{font-size:.92rem;color:var(--n500);line-height:1.6;margin-bottom:1.1rem}
 .help-contact{display:flex;align-items:center;gap:.7rem;text-decoration:none}
@@ -268,16 +268,16 @@ img{max-width:100%;display:block}
 .grid{display:grid;gap:1.5rem}
 .grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
-.card{background:#fff;border:1px solid var(--n100);border-radius:16px;padding:2rem 1.8rem;box-shadow:var(--shadow-sm);transition:.25s}
+.card{background:#fff;border:1px solid var(--n100);border-radius:2px;padding:2rem 1.8rem;box-shadow:var(--shadow-sm);transition:.25s}
 .card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
-.card .ico{width:48px;height:48px;border-radius:12px;background:var(--grad-soft);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem}
+.card .ico{width:48px;height:48px;border-radius:2px;background:var(--grad-soft);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem}
 .ico-svg{display:block;fill:currentColor}
 .card .ico .ico-svg{width:23px;height:23px;fill:var(--purple)}
 .btn .ico-svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
 .card h3{color:var(--purple);margin-bottom:.6rem}
 .card p{font-size:.95rem;color:var(--n500);line-height:1.7}
 .card .more{display:inline-block;margin-top:1rem;font-size:.85rem;font-weight:700;color:var(--pink)}
-.method-card{border-radius:16px;padding:2.2rem 2rem}
+.method-card{border-radius:2px;padding:2.2rem 2rem}
 .method-card .name{font-family:var(--fdisplay);font-size:1.7rem;font-weight:600;margin-bottom:.2rem}
 .method-card .tag{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--n400);margin-bottom:1rem}
 .method-card p{font-size:.95rem;color:var(--n500);line-height:1.7}
@@ -295,7 +295,7 @@ img{max-width:100%;display:block}
 .check-list li{display:flex;gap:.7rem;align-items:flex-start;padding:.35rem 0}
 .check-list li::before{content:'✓';color:var(--teal);font-weight:700;flex-shrink:0}
 /* Testimonials */
-.tcard{background:#fff;border-radius:16px;padding:1.8rem;box-shadow:var(--shadow-sm);border-top:3px solid var(--pink)}
+.tcard{background:#fff;border-radius:2px;padding:1.8rem;box-shadow:var(--shadow-sm);border-top:3px solid var(--pink)}
 .tcard .stars{color:var(--pink);font-size:.95rem;margin-bottom:.8rem;letter-spacing:2px}
 .tcard p{font-size:.95rem;color:var(--n500);line-height:1.7;font-style:italic;margin-bottom:1.1rem}
 .tcard .who{font-weight:700;color:var(--purple);font-size:.9rem}
@@ -312,7 +312,7 @@ img{max-width:100%;display:block}
 .faq details p{color:var(--n500);padding:0 0 1.2rem;line-height:1.75;margin:0}
 /* Werkgebied-regio's */
 .regio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
-.regio{background:#fff;border:1px solid var(--n100);border-radius:16px;padding:1.6rem;box-shadow:var(--shadow-sm)}
+.regio{background:#fff;border:1px solid var(--n100);border-radius:2px;padding:1.6rem;box-shadow:var(--shadow-sm)}
 .regio h3{color:var(--purple);font-size:1.15rem;margin-bottom:.5rem}
 .regio .plaatsen{font-size:.9rem;color:var(--n500);line-height:1.7}
 .regio .reistijd{display:inline-block;margin-top:.8rem;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--teal-700);background:var(--teal-100);padding:4px 10px;border-radius:var(--radius-full)}
@@ -329,7 +329,7 @@ img{max-width:100%;display:block}
 .cta-banner h2{color:#fff;margin-bottom:.9rem}
 .cta-banner p{color:rgba(255,255,255,.78);max-width:520px;margin:0 auto 1.8rem}
 /* Pricing table */
-.price-table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm);font-size:.95rem}
+.price-table{width:100%;border-collapse:collapse;background:#fff;border-radius:2px;overflow:hidden;box-shadow:var(--shadow-sm);font-size:.95rem}
 .price-table th,.price-table td{padding:1rem 1.2rem;text-align:left;border-bottom:1px solid var(--n100)}
 .price-table thead th{background:var(--purple);color:#fff;font-weight:600;font-family:var(--fbody);font-size:.8rem;letter-spacing:.04em;text-transform:uppercase}
 .price-table tbody tr:last-child td{border-bottom:none}
@@ -341,13 +341,13 @@ img{max-width:100%;display:block}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
 @media(max-width:800px){.contact-grid{grid-template-columns:1fr}}
 .contact-item{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.5rem}
-.contact-item .ci{width:44px;height:44px;flex-shrink:0;border-radius:12px;background:var(--grad-soft);display:flex;align-items:center;justify-content:center}
+.contact-item .ci{width:44px;height:44px;flex-shrink:0;border-radius:2px;background:var(--grad-soft);display:flex;align-items:center;justify-content:center}
 .contact-item .ci .ico-svg{width:19px;height:19px;fill:var(--purple)}
 .contact-item .lbl{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--n400);margin-bottom:.15rem}
 .contact-item .val{color:var(--purple);font-weight:600;font-size:1.05rem}
 .form-field{margin-bottom:1.1rem}
 .form-field label{display:block;font-size:.85rem;font-weight:600;color:var(--purple);margin-bottom:.35rem}
-.form-field input,.form-field textarea{width:100%;padding:.75rem .9rem;border:1px solid var(--n200);border-radius:10px;background:var(--n50);font-size:.95rem;outline:none;transition:.2s;font-family:var(--fbody)}
+.form-field input,.form-field textarea{width:100%;padding:.75rem .9rem;border:1px solid var(--n200);border-radius:2px;background:var(--n50);font-size:.95rem;outline:none;transition:.2s;font-family:var(--fbody)}
 .form-field input:focus,.form-field textarea:focus{border-color:var(--pink);background:#fff;box-shadow:0 0 0 3px rgba(247,88,142,.12)}
 .form-field textarea{min-height:130px;resize:vertical}
 /* Footer */
@@ -395,16 +395,81 @@ body{max-width:1500px;margin-inline:auto;overflow-x:clip}
 .carousel::-webkit-scrollbar{height:8px}
 .carousel::-webkit-scrollbar-thumb{background:rgba(0,0,0,.18);border-radius:8px}
 .carousel>*{flex:0 0 auto;scroll-snap-align:start;width:min(320px,74vw)}
-.carousel img{width:100%;aspect-ratio:var(--carousel-ar,3/2);height:auto;object-fit:cover;border-radius:14px;display:block;box-shadow:var(--shadow-md)}
+.carousel img{width:100%;aspect-ratio:var(--carousel-ar,3/2);height:auto;object-fit:cover;border-radius:2px;display:block;box-shadow:var(--shadow-md)}
 .carousel figure{margin:0}
 .carousel figcaption{font-size:.85rem;color:var(--n500);margin-top:var(--carousel-caption-gap,.5rem);text-align:center}
+
+
+/* ═══════════════════════════════════════════════════════════════════
+   VAN DER BURG — EDITORIAL BRAND OVERRIDES (deep teal · ivory · turquoise)
+   ═══════════════════════════════════════════════════════════════════ */
+html{background:var(--n50)}
+body{background:var(--n50);color:var(--n700);font-weight:400;line-height:1.75}
+h1,h2,h3,h4,.hero-bg h1,.hero h1,.sec-head h2,.cta-banner h2,.help-card h3,.imgband-txt h2,.highlight h2,.regio h3{
+  font-family:var(--fdisplay);font-weight:400;letter-spacing:-.02em;line-height:1.12}
+.lead{color:var(--n500)}
+.quote{font-family:var(--fdisplay);font-style:italic;border-left:2px solid var(--teal);background:transparent;color:var(--purple)}
+.nav-links a{text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:500}
+.nav-links a.active,.nav-links a:hover{color:var(--teal)}
+.label,.sec-head .label,.hero-bg .label,.imgband-txt .label,.label.teal{
+  text-transform:uppercase;letter-spacing:.28em;color:var(--teal);font-weight:600;font-size:.72rem}
+.grad-text{background:none;-webkit-background-clip:border-box;-webkit-text-fill-color:var(--teal);color:var(--teal)}
+.btn{text-transform:uppercase;letter-spacing:.2em;font-weight:500;font-size:.72rem;border-radius:2px;min-height:50px;box-shadow:none}
+.btn-cta{background:var(--purple);color:var(--n50);border:1px solid var(--purple)}
+.btn-cta:hover{background:var(--pink-hover);border-color:var(--pink-hover);box-shadow:none;transform:translateY(-1px)}
+.btn-primary{background:var(--purple);color:var(--n50);box-shadow:none}
+.btn-ghost{border:1px solid var(--purple);color:var(--purple);background:transparent}
+.btn-ghost:hover{background:rgba(13,59,58,.06);color:var(--purple)}
+.btn-white{background:var(--n50);color:var(--purple)}
+.btn-white:hover{background:#fff;color:var(--purple)}
+.card{box-shadow:none;border:1px solid rgba(31,31,31,.12);background:#fff;border-radius:2px}
+.card:hover{box-shadow:var(--shadow-md);transform:none}
+.card .ico,.help-ico,.contact-item .ci{background:var(--teal-50)!important;border-radius:2px}
+.help-card,.cta-banner,.method-card,.tcard,.highlight,.price-table{border-radius:2px}
+.help-card{box-shadow:var(--shadow-md)}
+.section.tint{background:var(--n200)}            /* sand editorial-blok */
+.section.purple-tint{background:var(--purple);color:var(--n50)}
+.cta-banner{background:var(--purple);color:var(--n50)}
+.cta-banner p{color:rgba(245,239,233,.82)}
+.site-footer{background:var(--purple)}
+.wa-float{background:var(--teal)}
+.wa-float:hover{background:#4f8b87}
+/* hero: donker teal met ivory tekst (brand) */
+.hero-bg::before{background:linear-gradient(95deg,rgba(6,32,31,.93) 0%,rgba(6,32,31,.74) 45%,rgba(6,32,31,.22) 100%)}
+.hero-bg h1,.hero-bg-text,.hero-bg .hero-actions{color:var(--n50)}
+.hero-bg .lead{color:rgba(245,239,233,.85)}
+.hero-bg .label{color:var(--teal)}
+.hero{background:var(--purple);color:var(--n50)}
+.hero .lead{color:rgba(245,239,233,.85)}
+
+/* Masthead: vaste donker-teal balk met ivory logo + nav — leesbaar op elke pagina/scrollpositie */
+.site-header{background:var(--purple);border-bottom:1px solid rgba(245,239,233,.14)}
+.nav .logo img{height:46px}
+.nav-links a{color:rgba(245,239,233,.88)}
+.nav-links a.active,.nav-links a:hover{color:#fff;border-bottom-color:var(--teal)}
+.nav-links li.has-sub>a::after{opacity:.7}
+.site-header .cta.btn-cta{background:var(--teal);color:var(--purple);border-color:var(--teal);font-weight:600}
+.site-header .cta.btn-cta:hover{background:#6fb0ab;border-color:#6fb0ab;color:var(--purple)}
+.hamburger span{background:var(--n50)}
+
+
+/* ── Icon-stijl (brand board): dunne lijn-iconen in een dunne cirkel ───────── */
+:root{--gold:#C2A572}
+.card .ico,.help-ico,.contact-item .ci{background:transparent!important;border:1.5px solid var(--gold);border-radius:50%!important;width:62px;height:62px;display:inline-flex;align-items:center;justify-content:center}
+.card .ico{margin-bottom:1.1rem}
+.contact-item .ci{width:54px;height:54px}
+.help-ico{width:46px;height:46px}
+.card .ico .ico-svg,.help-ico .ico-svg,.contact-item .ci .ico-svg{width:28px;height:28px;fill:none!important;stroke:var(--gold)!important;stroke-width:1.5}
+.help-ico .ico-svg{width:22px;height:22px}
+/* Wordmark-logo in de header is breder: eerder naar hamburger zodat de nav niet overloopt */
+@media(max-width:1024px){.nav-links,.nav .cta{display:none}.hamburger{display:flex}}
 
 </style>
 <!-- CMS:THEMECSS:END -->
 </head>
 <body>
 <!-- CMS:HEADER:START -->
-<header class="site-header" id="siteHeader"><nav class="nav"><a href="index.html" class="logo" aria-label="Van der Burg Coaching home"><img src="assets/vanderburg-logo.svg" alt="Van der Burg Coaching &amp; Relatietherapie"></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="over-deborah.html">Over Deborah</a></li><li class="has-sub"><a href="diensten.html" class="active">Diensten</a><div class="submenu"><ul class="submenu-inner"><li><a href="relatietherapie.html">Relatietherapie</a></li><li><a href="eft-relatietherapie.html">EFT-relatietherapie</a></li><li><a href="individuele-coaching.html">Individuele Coaching</a></li><li><a href="v-cirkel-coaching.html">V-Cirkel Coaching</a></li><li><a href="burn-out-stress-coaching.html">Burn-out &amp; Stress Coaching</a></li><li><a href="kennismaking.html">Kennismaking</a></li></ul></div></li><li><a href="tarieven.html">Tarieven</a></li><li><a href="contact.html">Contact</a></li></ul><a href="contact.html" class="btn btn-cta cta">Gratis Kennismaking</a><button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></nav><div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="over-deborah.html">Over Deborah</a><a href="diensten.html">Diensten</a><a href="relatietherapie.html" class="msub">— Relatietherapie</a><a href="eft-relatietherapie.html" class="msub">— EFT-relatietherapie</a><a href="individuele-coaching.html" class="msub">— Individuele Coaching</a><a href="v-cirkel-coaching.html" class="msub">— V-Cirkel Coaching</a><a href="burn-out-stress-coaching.html" class="msub">— Burn-out &amp; Stress Coaching</a><a href="kennismaking.html" class="msub">— Kennismaking</a><a href="tarieven.html">Tarieven</a><a href="contact.html">Contact</a><a href="contact.html" class="btn btn-cta">Gratis Kennismaking</a></div></header>
+<header class="site-header" id="siteHeader"><nav class="nav"><a href="index.html" class="logo" aria-label="Van der Burg Coaching home"><img src="assets/vanderburg-logo-header.svg" alt="Van der Burg Coaching &amp; Relatietherapie"></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="over-deborah.html">Over Deborah</a></li><li class="has-sub"><a href="diensten.html" class="active">Diensten</a><div class="submenu"><ul class="submenu-inner"><li><a href="relatietherapie.html">Relatietherapie</a></li><li><a href="eft-relatietherapie.html">EFT-relatietherapie</a></li><li><a href="individuele-coaching.html">Individuele Coaching</a></li><li><a href="v-cirkel-coaching.html">V-Cirkel Coaching</a></li><li><a href="burn-out-stress-coaching.html">Burn-out &amp; Stress Coaching</a></li><li><a href="kennismaking.html">Kennismaking</a></li></ul></div></li><li><a href="tarieven.html">Tarieven</a></li><li><a href="contact.html">Contact</a></li></ul><a href="contact.html" class="btn btn-cta cta">Gratis Kennismaking</a><button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></nav><div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="over-deborah.html">Over Deborah</a><a href="diensten.html">Diensten</a><a href="relatietherapie.html" class="msub">— Relatietherapie</a><a href="eft-relatietherapie.html" class="msub">— EFT-relatietherapie</a><a href="individuele-coaching.html" class="msub">— Individuele Coaching</a><a href="v-cirkel-coaching.html" class="msub">— V-Cirkel Coaching</a><a href="burn-out-stress-coaching.html" class="msub">— Burn-out &amp; Stress Coaching</a><a href="kennismaking.html" class="msub">— Kennismaking</a><a href="tarieven.html">Tarieven</a><a href="contact.html">Contact</a><a href="contact.html" class="btn btn-cta">Gratis Kennismaking</a></div></header>
 <!-- CMS:HEADER:END -->
 <main>
 <section class="hero split">
@@ -478,12 +543,9 @@ body{max-width:1500px;margin-inline:auto;overflow-x:clip}
     if (h) {
       var RAMP = 120;
       var onScroll = function () {
+        /* Editorial: vaste donker-teal masthead — niet witwassen; alleen schaduw bij scrollen. */
         var t = Math.min(Math.max(window.scrollY, 0) / RAMP, 1);
-        h.style.background = 'rgba(255,255,255,' + (t * 0.97).toFixed(3) + ')';
-        var blur = 'blur(' + (t * 12).toFixed(2) + 'px)';
-        h.style.backdropFilter = blur; h.style.webkitBackdropFilter = blur;
-        h.style.boxShadow = t > 0.02 ? ('0 2px 16px rgba(62,46,109,' + (t * 0.10).toFixed(3) + ')') : 'none';
-        h.style.borderBottomColor = 'rgba(240,240,240,' + t.toFixed(3) + ')';
+        h.style.boxShadow = t > 0.02 ? ('0 2px 18px rgba(6,32,31,' + (t * 0.30).toFixed(3) + ')') : 'none';
       };
       window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
     }
