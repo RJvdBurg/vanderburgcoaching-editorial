@@ -755,6 +755,14 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
   .pillar .picon svg{height:100%;width:auto}
 }
 
+/* Mobile pillars: vaste icoon-kolom zodat dividers + teksten uitlijnen */
+@media(max-width:760px){
+  .pillar{grid-template-columns:96px 1fr;column-gap:1.5rem}
+  .pillar .picon{width:96px;height:auto;margin:0;padding:0;display:flex;align-items:center;justify-content:center;
+    border-right:1px solid rgba(161,116,43,.45)}
+  .pillar .picon svg{height:56px;width:auto;max-width:74px}
+}
+
 </style>
 <!-- CMS:THEMECSS:END -->
 </head>
