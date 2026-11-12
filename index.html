@@ -763,6 +763,10 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
   .pillar .picon svg{height:56px;width:auto;max-width:74px}
 }
 
+/* Homepage Aanbod: pillar grid WITH a section heading above (sec-head sits outside the grid) */
+.pillar-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+@media(max-width:760px){.pillar-grid{grid-template-columns:1fr}}
+
 </style>
 <!-- CMS:THEMECSS:END -->
 </head>
@@ -782,27 +786,22 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
     </div>
   </div>
 </section>
-<section class="section pillars">
+<section class="section tint">
   <div class="container">
-    <div class="pillar">
-      <span class="picon"><svg class="ico-svg" viewBox="2.9 5.6 18.2 12.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9.3" cy="12" r="5.6"/><circle cx="14.7" cy="12" r="5.6"/></svg></span>
-      <h3>Relaties</h3>
-      <p>Voor koppels die willen herstellen, verdiepen of vastgelopen zijn.</p>
+    <div class="sec-head">
+      <span class="label">Aanbod</span>
+      <h2>Ontdek welke vorm van begeleiding bij jou past</h2>
+      <p class="lead">Of je nu vastloopt in je relatie of in jezelf — ik help je begrijpen wat er speelt en hoe je daarin verder kunt. Individueel of samen.</p>
     </div>
-    <div class="pillar">
-      <span class="picon"><svg class="ico-svg" viewBox="4.3 4.0 15.4 16.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.6" r="3.1"/><path d="M5.8 19A6.2 6.2 0 0 1 18.2 19"/></svg></span>
-      <h3>Coaching</h3>
-      <p>Voor wie wil groeien in persoonlijk leiderschap, balans en veerkracht.</p>
-    </div>
-    <div class="pillar">
-      <span class="picon"><svg class="ico-svg" viewBox="1.0 4.3 21.2 14.3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.8 18.6A3.7 3.7 0 0 1 7.5 15.1"/><circle cx="5.4" cy="10.8" r="2.1"/><path d="M22.2 18.6A3.7 3.7 0 0 0 16.5 15.1"/><circle cx="18.6" cy="10.8" r="2.1"/><path d="M6.3 18.6A5.7 5.7 0 0 1 17.7 18.6"/><circle cx="12" cy="7.8" r="2.7"/></svg></span>
-      <h3>Training</h3>
-      <p>Voor professionals en organisaties die willen werken met patronen en dynamieken.</p>
+    <div class="pillar-grid">
+      <a class="pillar" href="relaties.html"><span class="picon"><svg class="ico-svg" viewBox="2.9 5.6 18.2 12.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9.3" cy="12" r="5.6"/><circle cx="14.7" cy="12" r="5.6"/></svg></span><h3>Relaties</h3><p>Voor koppels die willen herstellen, verdiepen of vastgelopen zijn.</p><span class="pill-link">Lees meer →</span></a>
+      <a class="pillar" href="coaching.html"><span class="picon"><svg class="ico-svg" viewBox="4.3 4.0 15.4 16.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.6" r="3.1"/><path d="M5.8 19A6.2 6.2 0 0 1 18.2 19"/></svg></span><h3>Coaching</h3><p>Voor wie wil groeien in persoonlijk leiderschap, balans en veerkracht.</p><span class="pill-link">Lees meer →</span></a>
+      <a class="pillar" href="training.html"><span class="picon"><svg class="ico-svg" viewBox="1.0 4.3 21.2 14.3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.8 18.6A3.7 3.7 0 0 1 7.5 15.1"/><circle cx="5.4" cy="10.8" r="2.1"/><path d="M22.2 18.6A3.7 3.7 0 0 0 16.5 15.1"/><circle cx="18.6" cy="10.8" r="2.1"/><path d="M6.3 18.6A5.7 5.7 0 0 1 17.7 18.6"/><circle cx="12" cy="7.8" r="2.7"/></svg></span><h3>Training</h3><p>Voor professionals en organisaties die willen werken met patronen en dynamieken.</p><span class="pill-link">Lees meer →</span></a>
     </div>
   </div>
 </section>
 
-<section class="section tint">
+<section class="section">
   <div class="container">
     <div class="sec-head">
       <span class="label">Van der Burg Coaching &amp; Relatietherapie</span>
@@ -814,36 +813,6 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
       <div class="stat"><div class="num grad-text stat-num" data-target="450" data-suffix="+">0</div><div class="lbl">Mensen geholpen</div></div>
       <div class="stat"><div class="num grad-text stat-num" data-target="4000" data-suffix="+">0</div><div class="lbl">Uur aan ervaring</div></div>
       <div class="stat"><div class="num"><span class="grad-text stat-num" data-target="4.9" data-decimals="1">0</span><span class="star">★</span></div><div class="lbl">Google-review</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="sec-head">
-      <span class="label">Diensten</span>
-      <h2>Ontdek welke vorm van begeleiding bij jou past</h2>
-      <p class="lead">Of je nu vastloopt in je relatie of in jezelf — ik help je begrijpen wat er speelt en hoe je daarin verder kunt. Individueel of samen.</p>
-    </div>
-    <div class="grid grid-3">
-      <div class="card">
-        <div class="ico"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9.3" cy="12" r="5"/><circle cx="14.7" cy="12" r="5"/></svg></div>
-        <h3>Relatietherapie</h3>
-        <p>Voor stellen die elkaar zijn kwijtgeraakt in het gedoe van het dagelijks leven. Herstel de verbinding, het vertrouwen en de nabijheid met EFT-relatietherapie.</p>
-        <a class="more" href="relatietherapie.html">Meer over relatietherapie →</a>
-      </div>
-      <div class="card">
-        <div class="ico"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.1"/><path d="M5.6 19c0-3.5 2.9-6 6.4-6s6.4 2.5 6.4 6"/></svg></div>
-        <h3>Individuele coaching</h3>
-        <p>Voor professionals die steeds dezelfde patronen herhalen in relaties, werk of persoonlijke zaken. Ontdek waarom je doet wat je doet en neem de regie terug.</p>
-        <a class="more" href="individuele-coaching.html">Meer over coaching →</a>
-      </div>
-      <div class="card">
-        <div class="ico"><svg class="ico-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15.5v-8A2.5 2.5 0 0 1 6.5 5h11A2.5 2.5 0 0 1 20 7.5v4A2.5 2.5 0 0 1 17.5 14H9l-5 4Z"/><path d="M8.5 9h7M8.5 11.5h4"/></svg></div>
-        <h3>Gratis kennismaking</h3>
-        <p>Een vrijblijvend kennismakingsgesprek van 30 minuten (individueel) of 60 minuten (relatie). Eerste inzichten die je direct kunt gebruiken — en een wederzijdse check.</p>
-        <a class="more" href="kennismaking.html">Plan een gesprek →</a>
-      </div>
     </div>
   </div>
 </section>
