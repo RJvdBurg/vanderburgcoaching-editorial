@@ -914,10 +914,13 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 .hp-carousel .hp-proof-main{margin:0;padding:0}
 .hp-carousel .hp-slide + .hp-slide{margin-top:3.5rem}
 .hp-carousel.is-ready .hp-slides{display:grid}
-.hp-carousel.is-ready .hp-slide{grid-area:1/1;align-self:center;margin:0;opacity:0;visibility:hidden}
-.hp-carousel.is-ready .hp-slide.is-active{opacity:1;visibility:visible}
-.hp-carousel.is-anim .hp-slide{transition:opacity .9s ease,visibility 0s linear .9s}
-.hp-carousel.is-anim .hp-slide.is-active{transition:opacity .9s ease .15s,visibility 0s}
+/* schuiven: nieuwe review komt van rechts binnen, vorige schuift links weg (terug-klik: andersom) */
+.hp-carousel.is-ready .hp-slide{grid-area:1/1;align-self:center;margin:0;visibility:hidden;transform:translate3d(100vw,0,0);transition:none}
+.hp-carousel.is-ready.is-back .hp-slide{transform:translate3d(-100vw,0,0)}
+.hp-carousel.is-ready .hp-slide.is-active{visibility:visible;transform:none}
+.hp-carousel.is-ready .hp-slide.is-leaving{visibility:visible;transform:translate3d(-100vw,0,0)}
+.hp-carousel.is-ready.is-back .hp-slide.is-leaving{transform:translate3d(100vw,0,0)}
+.hp-carousel.is-anim .hp-slide.is-active,.hp-carousel.is-anim .hp-slide.is-leaving{transition:transform 1.1s cubic-bezier(.7,0,.25,1)}
 .hp-dots{display:flex;justify-content:center;gap:6px;margin-top:2.6rem}
 .hp-carousel:not(.is-ready) .hp-dots{display:none}
 .hp-dot{appearance:none;-webkit-appearance:none;background:none;border:0;padding:14px 4px;margin:0;cursor:pointer;line-height:0}
@@ -925,7 +928,7 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 .hp-dot:hover::before{background:rgba(248,245,237,.75)}
 .hp-dot[aria-current="true"]::before{width:46px;height:2px;background:var(--beige)}
 .hp-dot:focus-visible{outline:1px solid var(--beige);outline-offset:2px}
-@media(prefers-reduced-motion:reduce){.hp-carousel.is-anim .hp-slide,.hp-carousel.is-anim .hp-slide.is-active,.hp-dot::before{transition:none}}
+@media(prefers-reduced-motion:reduce){.hp-carousel.is-anim .hp-slide.is-active,.hp-carousel.is-anim .hp-slide.is-leaving,.hp-dot::before{transition:none}}
 
 /* 08 over Deborah — foto links, introductie rechts */
 .hp-about{display:grid;grid-template-columns:50% 50%;min-height:770px;background:var(--n50)}
@@ -1340,17 +1343,26 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
         var b = document.createElement('button');
         b.type = 'button'; b.className = 'hp-dot';
         b.setAttribute('aria-label', 'Toon ervaring ' + (n + 1) + ' van ' + slides.length);
-        b.addEventListener('click', function () { show(n); play(); });
+        b.addEventListener('click', function () { if (n !== cur) show(n, n < cur); play(); });
         dotsWrap.appendChild(b);
         return b;
       });
-      function show(n) {
-        cur = (n + slides.length) % slides.length;
+      var leaveT = null;
+      function show(n, back) {
+        var next = (n + slides.length) % slides.length;
+        var prev = cur;
+        if (leaveT) { clearTimeout(leaveT); leaveT = null; }
+        slides.forEach(function (s) { s.classList.remove('is-leaving'); });
+        car.classList.toggle('is-back', !!back);
+        void car.offsetWidth; /* wachtpositie (rechts, of links bij terug) eerst vastzetten */
+        cur = next;
         slides.forEach(function (s, k) {
           var on = k === cur;
+          if (k === prev && !on && car.classList.contains('is-anim')) s.classList.add('is-leaving');
           s.classList.toggle('is-active', on);
           s.setAttribute('aria-hidden', on ? 'false' : 'true');
         });
+        leaveT = setTimeout(function () { slides.forEach(function (s) { s.classList.remove('is-leaving'); }); }, 1200);
         dots.forEach(function (d, k) { d.setAttribute('aria-current', k === cur ? 'true' : 'false'); });
       }
       function stop() { if (timer) { clearInterval(timer); timer = null; } }
