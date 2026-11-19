@@ -909,6 +909,23 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 .hp-proof-bottom .textlink{margin-top:0}
 .hp-cred{display:flex;gap:28px;align-items:center;letter-spacing:.04em}
 .hp-cred b{color:var(--beige);font-weight:500;letter-spacing:.13em}
+/* ervaringen-carousel: wisselt elke 7 s (gedrag in theme.js); zonder JS staan alle reviews onder elkaar */
+.hp-carousel{margin:auto 0;padding:2rem 0 2.6rem}
+.hp-carousel .hp-proof-main{margin:0;padding:0}
+.hp-carousel .hp-slide + .hp-slide{margin-top:3.5rem}
+.hp-carousel.is-ready .hp-slides{display:grid}
+.hp-carousel.is-ready .hp-slide{grid-area:1/1;align-self:center;margin:0;opacity:0;visibility:hidden}
+.hp-carousel.is-ready .hp-slide.is-active{opacity:1;visibility:visible}
+.hp-carousel.is-anim .hp-slide{transition:opacity .9s ease,visibility 0s linear .9s}
+.hp-carousel.is-anim .hp-slide.is-active{transition:opacity .9s ease .15s,visibility 0s}
+.hp-dots{display:flex;justify-content:center;gap:6px;margin-top:2.6rem}
+.hp-carousel:not(.is-ready) .hp-dots{display:none}
+.hp-dot{appearance:none;-webkit-appearance:none;background:none;border:0;padding:14px 4px;margin:0;cursor:pointer;line-height:0}
+.hp-dot::before{content:"";display:block;width:26px;height:1px;background:rgba(248,245,237,.38);transition:width .4s ease,background .3s}
+.hp-dot:hover::before{background:rgba(248,245,237,.75)}
+.hp-dot[aria-current="true"]::before{width:46px;height:2px;background:var(--beige)}
+.hp-dot:focus-visible{outline:1px solid var(--beige);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.hp-carousel.is-anim .hp-slide,.hp-carousel.is-anim .hp-slide.is-active,.hp-dot::before{transition:none}}
 
 /* 08 over Deborah — foto links, introductie rechts */
 .hp-about{display:grid;grid-template-columns:50% 50%;min-height:770px;background:var(--n50)}
@@ -998,6 +1015,8 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
   .hp-proof blockquote{font-size:clamp(1.6rem,6.8vw,2.2rem)}
   .hp-quote-mark{font-size:70px;height:50px}
   .hp-attrib{margin-top:1.6rem;font-size:.56rem}
+  .hp-carousel{padding:1.4rem 0 2rem}
+  .hp-dots{margin-top:1.8rem}
   .hp-proof-bottom{display:block}
   .hp-proof-bottom .textlink{margin-top:1.2rem}
   .hp-about{grid-template-columns:1fr;min-height:0}
@@ -1329,6 +1348,51 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
         burger.setAttribute('aria-expanded', open);
       });
     }
+
+    /* Ervaringen-carousel: wisselt automatisch (data-interval, standaard 7 s); pauzeert bij muis/focus en verborgen tab */
+    [].forEach.call(document.querySelectorAll('.hp-carousel'), function (car) {
+      var slides = [].slice.call(car.querySelectorAll('.hp-slide'));
+      var dotsWrap = car.querySelector('.hp-dots');
+      if (slides.length < 2 || !dotsWrap) return;
+      var ms = parseInt(car.getAttribute('data-interval') || '7000', 10) || 7000;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var cur = 0, timer = null, hover = false, focus = false;
+      dotsWrap.innerHTML = '';
+      var dots = slides.map(function (s, n) {
+        s.setAttribute('aria-roledescription', 'slide');
+        s.setAttribute('aria-label', (n + 1) + ' van ' + slides.length);
+        var b = document.createElement('button');
+        b.type = 'button'; b.className = 'hp-dot';
+        b.setAttribute('aria-label', 'Toon ervaring ' + (n + 1) + ' van ' + slides.length);
+        b.addEventListener('click', function () { show(n); play(); });
+        dotsWrap.appendChild(b);
+        return b;
+      });
+      function show(n) {
+        cur = (n + slides.length) % slides.length;
+        slides.forEach(function (s, k) {
+          var on = k === cur;
+          s.classList.toggle('is-active', on);
+          s.setAttribute('aria-hidden', on ? 'false' : 'true');
+        });
+        dots.forEach(function (d, k) { d.setAttribute('aria-current', k === cur ? 'true' : 'false'); });
+      }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      function play() {
+        stop();
+        if (reduce || hover || focus || document.hidden) return;
+        timer = setInterval(function () { show(cur + 1); }, ms);
+      }
+      car.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { hover = true; stop(); } });
+      car.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') { hover = false; play(); } });
+      car.addEventListener('focusin', function () { focus = true; stop(); });
+      car.addEventListener('focusout', function (e) { if (!car.contains(e.relatedTarget)) { focus = false; play(); } });
+      document.addEventListener('visibilitychange', function () { if (document.hidden) stop(); else play(); });
+      car.classList.add('is-ready');
+      show(0);
+      requestAnimationFrame(function () { requestAnimationFrame(function () { car.classList.add('is-anim'); }); });
+      play();
+    });
 
     var cform = document.getElementById('contactForm');
     if (cform) {
