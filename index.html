@@ -971,24 +971,27 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 
 /* 02 herkenning — typografisch, drie kolommen met dunne lijnen */
 .hp-recog{background:var(--n50);padding:7rem 0 6.5rem}
-.hp-recog-top{display:grid;grid-template-columns:1.55fr .65fr;gap:100px;align-items:end;margin-bottom:6.5rem}
-.hp-recog h2{font-size:clamp(3.2rem,5.2vw,5.6rem);line-height:1.09}
-.hp-intro{font-size:1.05rem;line-height:1.75;color:#5F726C;max-width:320px;padding-bottom:.75rem;margin:0}
+.hp-recog-top{display:grid;grid-template-columns:1.25fr .85fr;gap:90px;align-items:end;margin-bottom:6rem}
+.hp-recog h2{font-size:clamp(3rem,4.4vw,4.8rem);line-height:1.09}
+.hp-intro{font-size:1rem;line-height:1.75;color:#5F726C;max-width:430px;padding-bottom:.75rem;margin:0}
+.hp-intro p{margin:0}
+.hp-intro-q{font-family:var(--fdisplay);font-style:italic;font-size:1.3rem;line-height:1.45;color:var(--purple);letter-spacing:-.005em}
+.hp-intro p+p{margin-top:1.3rem}
 .hp-areas{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(4,44,47,.16)}
 .hp-area{padding:1.7rem 2rem .6rem 0;border-right:1px solid rgba(4,44,47,.16)}
 .hp-area+.hp-area{padding-left:2rem}
 .hp-area:last-child{border-right:0}
 .hp-num{font-size:.62rem;letter-spacing:.12em;color:#8A744C}
 .hp-area h3{font-size:1.9rem;margin:1.4rem 0 .9rem;color:var(--purple)}
-.hp-area p{font-size:.85rem;line-height:1.6;color:#5F726C;margin:0}
+.hp-area p{font-size:.88rem;line-height:1.7;color:#5F726C;margin:0}
 
 /* 03 visie — tekst links, verticaal architectuurbeeld rechts */
 .hp-vision{display:grid;grid-template-columns:1fr 1fr;min-height:790px;background:var(--n100)}
 .hp-vision-copy{display:flex;align-items:center;padding:90px 0}
 .hp-vision-inner{width:min(100% - 112px,570px);margin-inline:auto}
-.hp-vision h2{font-size:clamp(3.2rem,4.8vw,5.2rem);line-height:1.1}
+.hp-vision h2{font-size:clamp(2.8rem,3.9vw,4.3rem);line-height:1.1}
 .hp-vision .hp-line,.hp-about .hp-line{margin:2.6rem 0 1.75rem}
-.hp-vision p,.hp-about p{font-size:1.05rem;line-height:1.75;color:#5F726C;max-width:440px;margin:0}
+.hp-vision p,.hp-about p{font-size:1rem;line-height:1.75;color:#5F726C;max-width:490px;margin:0}
 .hp-vision .hp-photo{min-height:790px}
 .hp-vision .hp-photo img{object-position:50% 49%}
 
@@ -997,7 +1000,7 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 .hp-persp::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 15% 20%,rgba(138,180,158,.12),transparent 58%),radial-gradient(ellipse at 95% 92%,rgba(1,23,22,.5),transparent 60%)}
 .hp-persp-inner{max-width:1100px;padding:87px 20px}
 .hp-persp .hp-eyebrow{justify-content:center;margin-bottom:1.6rem}
-.hp-persp h2{font-size:clamp(3.2rem,6vw,6.1rem);line-height:1.11;letter-spacing:-.04em}
+.hp-persp h2{font-size:clamp(2.8rem,4.7vw,5rem);line-height:1.13;letter-spacing:-.03em}
 .hp-persp .hp-line{margin:3rem auto 1.7rem}
 .hp-persp p{font-size:1rem;color:rgba(248,245,237,.8);margin:0}
 
@@ -1005,7 +1008,10 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 .hp-head{display:flex;justify-content:space-between;align-items:end;gap:60px}
 .hp-head .hp-eyebrow{margin-bottom:1.6rem}
 .hp-head h2{font-size:clamp(3.2rem,5vw,5.2rem);line-height:1.1}
-.hp-head>p{max-width:330px;color:#5F726C;font-size:.95rem;line-height:1.7;padding-bottom:.6rem;margin:0}
+.hp-head>p,.hp-head-txt{max-width:430px;color:#5F726C;font-size:.95rem;line-height:1.7;padding-bottom:.6rem;margin:0;flex:none}
+.hp-head-txt p{margin:0}
+.hp-head-txt p+p{margin-top:.9rem}
+.hp-head-txt .hp-intro-q{margin-bottom:1.3rem}
 .hp-offer{background:var(--n50);padding:6.8rem 0 7.5rem}
 .hp-offer .hp-head{margin-bottom:3.75rem}
 .hp-offer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
@@ -1016,7 +1022,10 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 .hp-card .hp-icon svg{display:block;width:100%;height:100%;fill:none;stroke:var(--gold-icon);stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .hp-card .hp-icon svg *{vector-effect:non-scaling-stroke}
 .hp-card h3{font-size:2.8rem;line-height:1.1;margin:0 0 .6rem;color:var(--purple)}
-.hp-card p{font-size:.82rem;line-height:1.55;color:#5F726C;margin:0;padding-right:2rem}
+.hp-card p{font-size:.85rem;line-height:1.6;color:#5F726C;margin:0}
+.hp-card-cta{margin-top:auto;padding-top:1.9rem;font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#8A744C}
+.hp-card-cta span{display:inline-block;margin-left:.35rem;transition:transform .2s}
+.hp-card:hover .hp-card-cta span{transform:translateX(4px)}
 .hp-card-arrow{position:absolute;right:34px;bottom:31px;color:#8A744C;font-size:1.4rem;transition:transform .2s}
 .hp-card:hover .hp-card-arrow{transform:translateX(4px)}
 .hp-method{background:var(--n100);padding:7.2rem 0}
@@ -1034,7 +1043,7 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 .hp-proof-inner{display:flex;flex-direction:column;min-height:625px}
 .hp-proof-main{margin:auto 0;padding:2rem 0 3.5rem;text-align:center}
 .hp-quote-mark{color:var(--beige);font:100px/.9 var(--fdisplay);height:75px}
-.hp-proof blockquote{margin:0 auto;padding:0;border:0;background:none;max-width:1050px;font-family:var(--fdisplay);font-style:normal;font-size:clamp(2rem,3.3vw,3.3rem);line-height:1.25;letter-spacing:-.02em;color:var(--n50)}
+.hp-proof blockquote{margin:0 auto;padding:0;border:0;background:none;max-width:1000px;font-family:var(--fdisplay);font-style:normal;font-size:clamp(1.45rem,2.15vw,2.15rem);line-height:1.42;letter-spacing:-.012em;color:var(--n50)}
 .hp-attrib{font-size:.62rem;letter-spacing:.17em;text-transform:uppercase;color:rgba(248,245,237,.7);margin-top:2.4rem}
 .hp-proof-bottom{border-top:1px solid rgba(248,245,237,.22);padding-top:1.6rem;display:flex;align-items:center;justify-content:space-between;gap:35px;color:rgba(248,245,237,.82);font-size:.72rem}
 .hp-proof-bottom .textlink{margin-top:0}
@@ -1076,7 +1085,10 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 .hp-contact-wash{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(4,44,47,.87),rgba(4,44,47,.54) 60%,rgba(4,44,47,.57)),linear-gradient(0deg,rgba(4,44,47,.85),transparent 45%)}
 .hp-contact-inner{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:100px 0 90px}
 .hp-contact h2{font-size:clamp(3.6rem,6.3vw,6.4rem);line-height:1.04;max-width:1000px}
-.hp-contact p{font-size:1rem;line-height:1.7;color:rgba(248,245,237,.85);margin:1.8rem 0 2.4rem}
+.hp-contact p{font-size:1rem;line-height:1.7;color:rgba(248,245,237,.85);margin:0;max-width:560px}
+.hp-contact h2+p{margin-top:1.8rem}
+.hp-contact p+p{margin-top:.9rem}
+.hp-contact p+.btn{margin-top:2.4rem}
 
 @media(max-width:850px){
   .hp-wrap,.hp-hero-inner{width:calc(100% - 60px)}
@@ -1105,35 +1117,37 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
   .hp-edge{display:none}
   .hp-recog{padding:4.9rem 0 4.4rem}
   .hp-recog-top{display:block;margin-bottom:3rem}
-  .hp-recog h2{font-size:clamp(2.6rem,10vw,3.6rem)}
+  .hp-recog h2{font-size:clamp(2.3rem,9vw,3.2rem)}
   .hp-intro{margin-top:1.6rem;font-size:.95rem;max-width:none}
+  .hp-intro-q{font-size:1.15rem}
   .hp-areas{grid-template-columns:1fr}
   .hp-area,.hp-area+.hp-area{padding:1.4rem 0 1.5rem;border-right:0;border-bottom:1px solid rgba(4,44,47,.16)}
   .hp-area:last-child{border-bottom:0}
   .hp-area h3{margin:.5rem 0;font-size:1.7rem}
   .hp-vision{grid-template-columns:1fr;min-height:0}
   .hp-vision-copy{padding:4.75rem 0 4.4rem}
-  .hp-vision h2{font-size:clamp(2.6rem,10vw,3.6rem)}
+  .hp-vision h2{font-size:clamp(2.3rem,9vw,3.2rem)}
   .hp-vision .hp-line,.hp-about .hp-line{margin:1.9rem 0 1.5rem}
   .hp-vision p,.hp-about p{font-size:.95rem}
   .hp-vision .hp-photo{min-height:420px;height:420px}
   .hp-vision .hp-photo img{object-position:center 48%}
   .hp-persp{min-height:560px}
   .hp-persp-inner{padding:80px 20px}
-  .hp-persp h2{font-size:clamp(2.6rem,10.5vw,3.8rem)}
+  .hp-persp h2{font-size:clamp(2.1rem,8.6vw,3rem)}
   .hp-persp .hp-line{margin:2.1rem auto 1.4rem}
   .hp-persp p{font-size:.9rem}
   .hp-head{display:block}
   .hp-head h2{font-size:clamp(2.6rem,10vw,3.6rem)}
-  .hp-head>p{margin-top:1.25rem;padding:0;font-size:.95rem}
+  .hp-head>p,.hp-head-txt{margin-top:1.25rem;padding:0;font-size:.95rem;max-width:none}
   .hp-offer{padding:4.7rem 0 5.1rem}
   .hp-offer .hp-head{margin-bottom:2rem}
   .hp-offer-grid{grid-template-columns:1fr;gap:12px}
-  .hp-card{min-height:0;padding:24px 26px 28px;display:grid;grid-template-columns:78px 1fr;grid-template-rows:auto auto auto;gap:0 22px}
+  .hp-card{min-height:0;padding:24px 26px 28px;display:grid;grid-template-columns:78px 1fr;grid-template-rows:auto auto auto auto;gap:0 22px}
   .hp-card-id{grid-column:2;grid-row:1}
-  .hp-card .hp-icon{grid-column:1;grid-row:1/4;width:74px;height:64px;margin:0;align-self:center}
+  .hp-card .hp-icon{grid-column:1;grid-row:1/5;width:74px;height:64px;margin:0;align-self:center}
   .hp-card h3{grid-column:2;grid-row:2;margin:.6rem 0 .4rem;font-size:2rem}
-  .hp-card p{grid-column:2;grid-row:3;font-size:.78rem}
+  .hp-card p{grid-column:2;grid-row:3;font-size:.8rem}
+  .hp-card-cta{grid-column:2;grid-row:4;padding-top:1rem}
   .hp-card-arrow{right:22px;bottom:20px;font-size:1.15rem}
   .hp-method{padding:4.8rem 0 5.2rem}
   .hp-steps{display:block;margin-top:2.7rem}
@@ -1146,7 +1160,7 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
   .hp-method .textlink{margin-top:1.5rem}
   .hp-proof{padding:4.7rem 0 2.9rem}
   .hp-proof-inner{min-height:500px}
-  .hp-proof blockquote{font-size:clamp(1.6rem,6.8vw,2.2rem)}
+  .hp-proof blockquote{font-size:clamp(1.12rem,4.7vw,1.4rem);line-height:1.45}
   .hp-quote-mark{font-size:70px;height:50px}
   .hp-attrib{margin-top:1.6rem;font-size:.56rem}
   .hp-carousel{padding:1.4rem 0 2rem}
@@ -1162,7 +1176,7 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
   .hp-contact-bg{object-position:61% center}
   .hp-contact-inner{padding:86px 0 80px}
   .hp-contact h2{font-size:clamp(2.9rem,11.5vw,4.4rem)}
-  .hp-contact p{font-size:.9rem;max-width:315px}
+  .hp-contact p{font-size:.9rem;max-width:340px}
 }
 
 /* ═══ OVER DEBORAH — designer-secties 01–07 (2026-11-19). Thema-fonts + knoppen; geen sectielabels. ═══ */
@@ -1310,7 +1324,7 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
   <div class="hp-hero-inner">
     <div class="hp-hero-copy">
       <div class="hp-eyebrow">Van der Burg</div>
-      <h1>Relaties, coaching <em>&amp; wat ons werkelijk beweegt.</em></h1>
+      <h1>Relaties, Coaching <em>&amp; wat ons werkelijk beweegt.</em></h1>
       <span class="hp-line"></span>
       <a href="aanbod.html" class="btn btn-cta">Ontdek de mogelijkheden</a>
     </div>
@@ -1320,13 +1334,16 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 <section class="hp-sec hp-recog" aria-label="Herkenning">
   <div class="hp-wrap">
     <div class="hp-recog-top">
-      <h2>Je wilt begrijpen waarom je doet wat je doet.</h2>
-      <p class="hp-intro">Of je nu vastloopt in je relatie of in jezelf — ik help je begrijpen wat er speelt en hoe je daarin verder kunt.</p>
+      <h2>Onrust, frustratie, verdriet, schaamte en onbegrip</h2>
+      <div class="hp-intro">
+        <p>Gevoelens die je liever wegduwt, oplost of wegpraat — tot ze niet meer te negeren zijn. Ze zetten zich vast in je lijf, kruipen tussen jou en je partner in, of maken dat je je steeds eenzamer voelt.</p>
+        <p class="hp-intro-q">We weten vaak heel goed waar we last van hebben. Maar begrijpen we ook wat er werkelijk onder zit?</p>
+      </div>
     </div>
     <div class="hp-areas">
-      <article class="hp-area"><span class="hp-num">01</span><h3>Relaties</h3><p>Jullie praten langs elkaar heen en dezelfde ruzies keren steeds terug.</p></article>
-      <article class="hp-area"><span class="hp-num">02</span><h3>Jezelf</h3><p>Je voelt je overweldigd en hebt moeite om grenzen aan te geven.</p></article>
-      <article class="hp-area"><span class="hp-num">03</span><h3>Werk &amp; leven</h3><p>Je zoekt balans tussen werk, gezin en persoonlijke ontwikkeling.</p></article>
+      <article class="hp-area"><span class="hp-num">01</span><h3>Relaties</h3><p>Steeds hetzelfde gesprek dat eindigt in strijd of stilte. Samen een leven draaiende houden terwijl het vertrouwen beschadigd of weg is. Je wilt elkaar bereiken, maar voor je het weet zitten jullie weer vast in verwijt, verdediging of afstand.</p></article>
+      <article class="hp-area"><span class="hp-num">02</span><h3>Jezelf</h3><p>Of je nu hard werkt, veel in je hoofd zit en alle ballen in de lucht houdt — of jezelf juist steeds aanpast en wegcijfert: uiteindelijk maakt het je diep vermoeid. Je voelt dat je jezelf steeds meer kwijtraakt en vastzit in patronen waar je alleen niet uitkomt.</p></article>
+      <article class="hp-area"><span class="hp-num">03</span><h3>Werk</h3><p>Op papier staat er een sterk team, maar onder de oppervlakte schuurt het. Dingen blijven onuitgesproken, mensen praten langs elkaar heen en dezelfde frustraties keren steeds terug. Het kost ongemerkt bakken met energie en remt de samenwerking — zonder dat iemand het echt doorbreekt.</p></article>
     </div>
   </div>
 </section>
@@ -1334,10 +1351,10 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 <section class="hp-sec hp-vision" aria-label="Visie">
   <div class="hp-vision-copy">
     <div class="hp-vision-inner">
-      <h2>Wat je ziet is niet altijd wat er speelt.</h2>
+      <h2>Wat je ziet, is niet altijd wat er werkelijk speelt.</h2>
       <span class="hp-line"></span>
-      <p>Veel vragen gaan niet over de inhoud, maar over de patronen eronder: hoe we communiceren, met spanning omgaan en elkaar begrijpen. Daar kijken we samen naar — rustig, helder en zonder oordeel.</p>
-      <a class="textlink" href="werkwijze.html">Over mijn benadering →</a>
+      <p>De één loopt vast in communicatie, de ander ervaart druk of vindt het moeilijk om grenzen te stellen. Achter ons gedrag schuilen vaak diepere overtuigingen, beschermingsmechanismen en verlangens die bepalen hoe we naar onszelf en anderen kijken. Zolang we alleen kijken naar wat er gebeurt, blijft onzichtbaar waarom patronen zich blijven herhalen. In mijn werk onderzoeken we wat ons werkelijk beweegt en waar ruimte ontstaat voor verandering.</p>
+      <a class="textlink" href="werkwijze.html">Meer over mijn werkwijze →</a>
     </div>
   </div>
   <div class="hp-photo"><img src="assets/home-visie.webp" alt="" width="1122" height="1402" loading="lazy"></div>
@@ -1345,9 +1362,9 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 
 <section class="hp-sec hp-persp hp-dark" aria-label="Perspectief">
   <div class="hp-persp-inner">
-    <h2>Zicht op jezelf. <em>Begrip voor elkaar.</em></h2>
+    <h2>We lopen niet vast op wie we zijn, <em>maar op wat we automatisch zijn gaan doen.</em></h2>
     <span class="hp-line"></span>
-    <p>Van overleven naar leven in balans, regie en verbinding.</p>
+    <p>Zien wat je stuurt, geeft ruimte om anders te kiezen.</p>
   </div>
 </section>
 
@@ -1357,12 +1374,12 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
       <div>
         <h2>Ontdek welke vorm bij jou past.</h2>
       </div>
-      <p>Individueel, samen met je partner of met je team.</p>
+      <p>Of je nu samen vastloopt, jezelf beter wilt begrijpen of de samenwerking met anderen wilt verbeteren: de ingang is verschillend, maar de vraag eronder is vaak dezelfde. Wat stuurt ons gedrag en wat kunnen we daarin veranderen?</p>
     </div>
     <div class="hp-offer-grid">
-      <a class="hp-card" href="relaties.html"><span class="hp-card-id">01 — Relaties</span><span class="hp-icon"><svg viewBox="2.9 5.6 18.2 12.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9.3" cy="12" r="5.6"/><circle cx="14.7" cy="12" r="5.6"/></svg></span><h3>Relaties</h3><p>Voor koppels die willen herstellen, verdiepen of vastgelopen zijn.</p><span class="hp-card-arrow" aria-hidden="true">→</span></a>
-      <a class="hp-card" href="coaching.html"><span class="hp-card-id">02 — Coaching</span><span class="hp-icon"><svg viewBox="4.3 4.0 15.4 16.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.6" r="3.1"/><path d="M5.8 19A6.2 6.2 0 0 1 18.2 19"/></svg></span><h3>Coaching</h3><p>Voor wie wil groeien in persoonlijk leiderschap, balans en veerkracht.</p><span class="hp-card-arrow" aria-hidden="true">→</span></a>
-      <a class="hp-card" href="training.html"><span class="hp-card-id">03 — Training</span><span class="hp-icon"><svg viewBox="1.0 4.3 21.2 14.3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.8 18.6A3.7 3.7 0 0 1 7.5 15.1"/><circle cx="5.4" cy="10.8" r="2.1"/><path d="M22.2 18.6A3.7 3.7 0 0 0 16.5 15.1"/><circle cx="18.6" cy="10.8" r="2.1"/><path d="M6.3 18.6A5.7 5.7 0 0 1 17.7 18.6"/><circle cx="12" cy="7.8" r="2.7"/></svg></span><h3>Training</h3><p>Voor professionals en organisaties die willen werken met patronen en dynamieken.</p><span class="hp-card-arrow" aria-hidden="true">→</span></a>
+      <a class="hp-card" href="relaties.html"><span class="hp-card-id">01 — Relaties</span><span class="hp-icon"><svg viewBox="2.9 5.6 18.2 12.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9.3" cy="12" r="5.6"/><circle cx="14.7" cy="12" r="5.6"/></svg></span><h3>Relaties</h3><p>Voor koppels die elkaar zijn kwijtgeraakt, vastlopen in terugkerende patronen en opnieuw willen ontdekken hoe ze elkaar kunnen vinden, begrijpen en verbinden.</p><span class="hp-card-cta">Ontdek Relaties <span aria-hidden="true">→</span></span></a>
+      <a class="hp-card" href="coaching.html"><span class="hp-card-id">02 — Coaching</span><span class="hp-icon"><svg viewBox="4.3 4.0 15.4 16.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.6" r="3.1"/><path d="M5.8 19A6.2 6.2 0 0 1 18.2 19"/></svg></span><h3>Coaching</h3><p>Voor wie vastloopt, overbelast is of zichzelf kwijtgeraakt is en wil werken aan herstel, veerkracht en persoonlijk leiderschap.</p><span class="hp-card-cta">Ontdek Coaching <span aria-hidden="true">→</span></span></a>
+      <a class="hp-card" href="training.html"><span class="hp-card-id">03 — Training</span><span class="hp-icon"><svg viewBox="1.0 4.3 21.2 14.3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1.8 18.6A3.7 3.7 0 0 1 7.5 15.1"/><circle cx="5.4" cy="10.8" r="2.1"/><path d="M22.2 18.6A3.7 3.7 0 0 0 16.5 15.1"/><circle cx="18.6" cy="10.8" r="2.1"/><path d="M6.3 18.6A5.7 5.7 0 0 1 17.7 18.6"/><circle cx="12" cy="7.8" r="2.7"/></svg></span><h3>Training</h3><p>Voor professionals, teams en organisaties die vastlopen in samenwerking en communicatie en willen werken aan duurzame verbetering.</p><span class="hp-card-cta">Ontdek Training <span aria-hidden="true">→</span></span></a>
     </div>
   </div>
 </section>
@@ -1371,16 +1388,20 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
   <div class="hp-wrap">
     <div class="hp-head">
       <div>
-        <h2>Van kennismaking tot verankering.</h2>
+        <h2>Begrijpen is niet hetzelfde als veranderen.</h2>
       </div>
-      <p>Rustig, helder en zonder oordeel. We kijken samen naar wat er speelt, naar de patronen eronder, en naar wat je werkelijk verder helpt.</p>
+      <div class="hp-head-txt">
+        <p class="hp-intro-q">Inzicht is geen eindpunt. Het gaat erom wat je ermee doet.</p>
+        <p>Ik luister aandachtig, stel vragen die verder gaan dan het eerste antwoord en maak bespreekbaar wat vaak onbesproken blijft.</p>
+        <p>Dat vraagt om ruimte en vertrouwen, maar soms ook om een confronterende spiegel.</p>
+      </div>
     </div>
     <div class="hp-steps">
-      <article class="hp-step"><div class="hp-step-head"><span>01</span><i></i></div><h3>Kennismaking</h3><p>Een vrijblijvend gesprek over wat er speelt en wat je wilt bereiken.</p></article>
-      <article class="hp-step"><div class="hp-step-head"><span>02</span><i></i></div><h3>Patronen</h3><p>Samen brengen we in kaart wat zich herhaalt, en werken we aan wat vastzit.</p></article>
-      <article class="hp-step"><div class="hp-step-head"><span>03</span><i></i></div><h3>Verankeren</h3><p>Wat je ontdekt beklijft, zodat je er zelfstandig mee verder kunt.</p></article>
+      <article class="hp-step"><div class="hp-step-head"><span>01</span><i></i></div><h3>Kennismaken</h3><p>We bespreken wat er speelt, waar je tegenaan loopt en wat je graag anders zou willen zien. Ook onderzoeken we of mijn manier van werken bij je past.</p></article>
+      <article class="hp-step"><div class="hp-step-head"><span>02</span><i></i></div><h3>Begrijpen</h3><p>We kijken voorbij de eerste verklaringen. Welke overtuigingen sturen je gedrag? Wat herhaalt zich? En welke invloed heeft dat op jezelf en de mensen om je heen?</p></article>
+      <article class="hp-step"><div class="hp-step-head"><span>03</span><i></i></div><h3>Anders handelen</h3><p>Je leert herkennen wat er gebeurt op het moment dat het gebeurt. Daardoor ontstaat er ruimte om niet automatisch hetzelfde te doen, maar bewust andere keuzes te maken.</p></article>
     </div>
-    <a class="textlink" href="werkwijze.html">Bekijk de werkwijze →</a>
+    <a class="textlink" href="werkwijze.html">Bekijk mijn werkwijze →</a>
   </div>
 </section>
 
@@ -1390,18 +1411,15 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
       <div class="hp-slides">
         <figure class="hp-proof-main hp-slide">
           <div class="hp-quote-mark" aria-hidden="true">“</div>
-          <blockquote>Deborah wist mij meteen op mijn gemak te stellen. Het voelde direct goed. De prettige sfeer in haar werkkamer, haar warme persoonlijkheid — iets in me zei: dit komt goed!</blockquote>
-          <figcaption class="hp-attrib">— Perine B., Noordwijkerhout</figcaption>
+          <blockquote>Als jij op zoek bent naar een coach nu, voor jezelf of je relatie, zit je vast niet zomaar naar deze review te kijken. Mijn bezoeken aan Deborah hebben me een diepe kijk in mijn ziel gegeven, terwijl er elk gesprek ook ruimte is voor luchtigheid. Ik raad iedereen aan die op zoek is naar oprechte interesse, onafgebroken aandacht en ook eerlijke confrontaties om hier aan te kloppen. Ze helpt.</blockquote>
         </figure>
         <figure class="hp-proof-main hp-slide">
           <div class="hp-quote-mark" aria-hidden="true">“</div>
-          <blockquote>Deborah is echt bewonderingswaardig. In korte tijd zoveel geleerd over mezelf, maar ook over mijn partner. Dit is een levensles en kennis over mezelf waar ik mijn leven lang wat aan heb.</blockquote>
-          <figcaption class="hp-attrib">— Sigrid V., Noordwijk</figcaption>
+          <blockquote>Vanaf het eerste moment voelden we ons begrepen en in goede handen bij Deborah. De sessies hebben ons niet alleen geholpen om bestaande problemen in onze relatie aan te pakken, maar hebben ook onze band versterkt en ons dichter bij elkaar gebracht. Dankzij Deborah hebben we weer vertrouwen in elkaar en in onze relatie.</blockquote>
         </figure>
         <figure class="hp-proof-main hp-slide">
           <div class="hp-quote-mark" aria-hidden="true">“</div>
-          <blockquote>Deborah heeft mij erg goed geholpen! Ik ben zeer tevreden over hoe het traject is gegaan en ik heb weer veel nieuws over mezelf geleerd. Hierdoor kan ik weer groeien.</blockquote>
-          <figcaption class="hp-attrib">— Lysan S., Katwijk aan Zee</figcaption>
+          <blockquote lang="en">Deborah is intelligent, compassionate, honest, and skilled at what she does. She knows exactly the questions to ask to help you work through whatever you’re going through, and help YOU arrive at the answer, rather than telling you what the answer is. I have made great progress in my own journey since working with her and would highly recommend her to anyone looking for some additional support in their life.</blockquote>
         </figure>
       </div>
       <div class="hp-dots" role="group" aria-label="Kies een ervaring"></div>
@@ -1419,8 +1437,8 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
     <div class="hp-about-inner">
       <h2>Deborah<br>van der Burg<span>.</span></h2>
       <span class="hp-line"></span>
-      <p>Relatietherapeute, coach en gids voor mensen die vastlopen in hun relaties, zichzelf of hun werk. Na 18 jaar executive support bij multinationals en een eigen burn-out weet ik hoe het voelt als het te veel wordt — en hoe je de regie terugneemt.</p>
-      <a class="textlink" href="over-deborah.html">Leer Deborah kennen →</a>
+      <p>Ik geloof dat we onszelf vaak minder goed kennen dan we denken en regelmatig blijven vasthouden aan wat ons in de weg staat. Na achttien jaar in het bedrijfsleven en mijn eigen ervaring met een burn-out ben ik me gaan verdiepen in waarom we doen wat we doen. Inmiddels begeleid ik stellen en individuen en geef ik trainingen aan professionals en teams. Betrokken en zonder oordeel, met aandacht voor wat ons beweegt en de patronen die we zelf niet altijd zien.</p>
+      <a class="textlink" href="over-deborah.html">Meer over Deborah →</a>
     </div>
   </div>
 </section>
@@ -1430,8 +1448,9 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
   <div class="hp-contact-wash"></div>
   <div class="hp-wrap hp-contact-inner">
     <h2>Zet vandaag de eerste stap.</h2>
-    <p>Plan een gratis kennismakingsgesprek — in de praktijk in Noordwijk of online.</p>
-    <a href="contact.html" class="btn btn-cta">Neem contact op</a>
+    <p>Je hoeft niet precies te weten waarom je vastloopt. Soms begint verandering juist met de bereidheid om te onderzoeken wat je nog niet begrijpt.</p>
+    <p>In een vrijblijvend kennismakingsgesprek kijken we samen wat er speelt en of mijn begeleiding bij je past.</p>
+    <a href="kennismaking.html" class="btn btn-cta">Plan een kennismaking</a>
   </div>
 </section>
 </main>
