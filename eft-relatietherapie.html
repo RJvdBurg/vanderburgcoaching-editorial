@@ -878,9 +878,10 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 .hp-hero{height:min(900px,100svh);min-height:670px;isolation:isolate;display:flex;align-items:center}
 .hp-hero-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:44% 36%;filter:brightness(.74) saturate(.62)}
 .hp-hero-wash{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(4,44,47,.25) 0%,rgba(4,44,47,.5) 44%,rgba(4,44,47,.92) 73%,rgba(4,44,47,.96) 100%),linear-gradient(0deg,rgba(4,44,47,.42),transparent 50%)}
-.hp-hero-inner{width:min(100% - 104px,1320px);margin-inline:auto;display:flex;justify-content:flex-end;padding-top:87px}
-.hp-hero-copy{width:min(58%,745px);padding-bottom:52px}
-.hp-hero h1{font-size:clamp(3.2rem,5.4vw,6rem);line-height:1.07;letter-spacing:-.035em;max-width:760px}
+/* tekst begint op 60% van de breedte: rechts van Deborah, op het donkere deel */
+.hp-hero-inner{width:100%;padding:87px clamp(32px,3.6vw,52px) 0 60%}
+.hp-hero-copy{max-width:600px;padding-bottom:52px}
+.hp-hero h1{font-size:clamp(2.6rem,3.8vw,3.9rem);line-height:1.07;letter-spacing:-.035em}
 .hp-hero .hp-line{width:76px;margin:2.5rem 0 2.4rem}
 .hp-edge{position:absolute;bottom:35px;left:max(52px,calc((100% - 1320px)/2));font-size:.62rem;letter-spacing:.3em;opacity:.6}
 
@@ -971,10 +972,13 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 .hp-contact h2{font-size:clamp(3.6rem,6.3vw,6.4rem);line-height:1.04;max-width:1000px}
 .hp-contact p{font-size:1rem;line-height:1.7;color:rgba(248,245,237,.85);margin:1.8rem 0 2.4rem}
 
-@media(max-width:1150px){.hp-hero-copy{width:62%}}
 @media(max-width:850px){
   .hp-wrap,.hp-hero-inner{width:calc(100% - 60px)}
-  .hp-hero-copy{width:72%}
+  .hp-hero{align-items:flex-end}
+  .hp-hero-wash{background:linear-gradient(0deg,rgba(4,44,47,.98) 0%,rgba(4,44,47,.88) 34%,rgba(4,44,47,.2) 64%,rgba(4,44,47,.45) 100%)}
+  .hp-hero-inner{margin-inline:auto;padding:0 0 90px}
+  .hp-hero-copy{width:100%;max-width:620px;padding:0}
+  .hp-hero h1{font-size:3.2rem}
   .hp-recog-top{gap:40px}
   .hp-vision-inner{width:calc(100% - 60px)}
   .hp-vision,.hp-vision .hp-photo{min-height:650px}
