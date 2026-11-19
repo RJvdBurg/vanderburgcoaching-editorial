@@ -912,7 +912,9 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 .hp-card{min-height:440px;border:1px solid rgba(4,44,47,.16);padding:36px 34px;display:flex;flex-direction:column;position:relative;color:inherit;text-decoration:none!important;transition:background .2s,border-color .2s}
 .hp-card:hover{background:var(--n100);border-color:var(--beige)}
 .hp-card-id{font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#5F726C}
-.hp-card img{width:120px;height:118px;object-fit:contain;align-self:center;margin:56px 0 25px}
+.hp-card .hp-icon{display:block;width:118px;height:96px;align-self:center;margin:56px 0 25px}
+.hp-card .hp-icon svg{display:block;width:100%;height:100%;fill:none;stroke:var(--gold-icon);stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.hp-card .hp-icon svg *{vector-effect:non-scaling-stroke}
 .hp-card h3{font-size:2.8rem;line-height:1.1;margin:0 0 .6rem;color:var(--purple)}
 .hp-card p{font-size:.82rem;line-height:1.55;color:#5F726C;margin:0;padding-right:2rem}
 .hp-card-arrow{position:absolute;right:34px;bottom:31px;color:#8A744C;font-size:1.4rem;transition:transform .2s}
@@ -1009,7 +1011,7 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
   .hp-offer-grid{grid-template-columns:1fr;gap:12px}
   .hp-card{min-height:0;padding:24px 26px 28px;display:grid;grid-template-columns:78px 1fr;grid-template-rows:auto auto auto;gap:0 22px}
   .hp-card-id{grid-column:2;grid-row:1}
-  .hp-card img{grid-column:1;grid-row:1/4;width:78px;height:80px;margin:0;align-self:center}
+  .hp-card .hp-icon{grid-column:1;grid-row:1/4;width:74px;height:64px;margin:0;align-self:center}
   .hp-card h3{grid-column:2;grid-row:2;margin:.6rem 0 .4rem;font-size:2rem}
   .hp-card p{grid-column:2;grid-row:3;font-size:.78rem}
   .hp-card-arrow{right:22px;bottom:20px;font-size:1.15rem}
