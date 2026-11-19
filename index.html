@@ -1141,6 +1141,137 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
   .hp-contact p{font-size:.9rem;max-width:315px}
 }
 
+/* ═══ OVER DEBORAH — designer-secties 01–07 (2026-11-19). Thema-fonts + knoppen; geen sectielabels. ═══ */
+.od-sec{position:relative;overflow:hidden}
+.od-sec h1,.od-sec h2,.od-sec h3{font-family:var(--fdisplay);font-weight:400;margin:0;color:var(--purple);letter-spacing:-.02em;text-wrap:balance}
+.od-sec h1 em,.od-sec h2 em{font-style:italic;-webkit-text-fill-color:currentColor}
+.od-sec p{margin:0}
+.od-dark{background:var(--purple);color:var(--n50)}
+.od-dark h1,.od-dark h2{color:var(--n50)}
+.od-rule{display:block;width:52px;height:1px;background:var(--beige)}
+.od-body{font-size:1.02rem;line-height:1.8;color:#5F726C}
+.od-body+.od-body{margin-top:1.4rem}
+.od-dark .od-body{color:rgba(248,245,237,.82)}
+.od-pic,.od-hero-pic{position:relative;overflow:hidden}
+.od-pic img,.od-hero-pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* 01 hero — split: tekst links op donkergroen, portret rechts (onder de menubalk) */
+.od-hero{padding-top:87px}
+.od-hero-grid{display:grid;grid-template-columns:47% 53%;min-height:680px}
+.od-hero-copy{display:flex;flex-direction:column;justify-content:center;padding:4.5rem 6vw 6rem max(52px,calc((100% - 1320px)/2))}
+.od-hero h1{font-size:clamp(4.2rem,6.6vw,7.2rem);line-height:1.02;white-space:nowrap}
+.od-hero .od-rule{margin:2.3rem 0}
+.od-name{font-size:.68rem;font-weight:600;letter-spacing:.29em;text-transform:uppercase;color:var(--beige)}
+.od-hero-intro{font-size:1.05rem;line-height:1.85;color:rgba(248,245,237,.8);max-width:360px;margin-top:1.1rem!important}
+.od-hero-pic{min-height:680px}
+.od-hero-pic img{object-position:35% 50%;filter:saturate(.78)}
+
+/* 02 wat mij drijft — één leeskolom, veel witruimte */
+.od-drive{background:var(--n50);padding:7rem 0 7.8rem}
+.od-drive-grid{display:grid;grid-template-columns:28% 72%}
+.od-drive-aside{padding-top:2.2rem}
+.od-drive-article{max-width:710px}
+.od-drive h2{font-size:clamp(3.8rem,6vw,5.9rem);line-height:1.06;margin-bottom:2.2rem}
+
+/* 03 hoe ik naar mensen kijk — donker met architectuur aan één zijde */
+.od-vision{min-height:760px;isolation:isolate}
+.od-vision-art{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(4,44,47,.94) 4%,rgba(4,44,47,.86) 46%,rgba(4,44,47,.24) 100%),url('assets/home-visie.webp') center/cover no-repeat}
+.od-vision-inner{padding:6.6rem 0 7.8rem}
+.od-vision h2{font-size:clamp(3.7rem,6vw,5.8rem);line-height:1.05}
+.od-vision .od-rule{margin:2.4rem 0 2.1rem}
+.od-vision blockquote{margin:0;padding:0;border:0;background:none;font-family:var(--fdisplay);font-style:normal;font-size:clamp(1.9rem,3.2vw,3.05rem);line-height:1.25;max-width:800px;color:var(--n50)}
+.od-vision .od-body{margin-top:2.7rem;max-width:590px}
+
+/* 04 de professionele basis — 2×2 met dunne lijnen */
+.od-base{background:var(--n100);padding:7rem 0 7.25rem}
+.od-base-head{display:grid;grid-template-columns:1.3fr .65fr;gap:75px;align-items:end;margin-bottom:4.7rem}
+.od-base h2{font-size:clamp(3.7rem,5.7vw,5.5rem);line-height:1.1}
+.od-base-head p{font-size:.95rem;line-height:1.7;color:#5F726C;padding-bottom:.6rem}
+.od-base-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid rgba(4,44,47,.16)}
+.od-item{padding:2.3rem 4rem 2.4rem 0;border-bottom:1px solid rgba(4,44,47,.16);min-height:210px}
+.od-item:nth-child(even){border-left:1px solid rgba(4,44,47,.16);padding-left:3.4rem}
+.od-num{font-size:.68rem;letter-spacing:.17em;color:#8A744C;margin-bottom:1.2rem}
+.od-item h3{font-size:2.25rem;line-height:1.1;margin-bottom:1.1rem}
+.od-item p{font-size:.88rem;line-height:1.65;color:#5F726C;max-width:360px}
+
+/* 05 wat je van mij kunt verwachten — kop links, tekstkolom rechts met lijn */
+.od-work{background:var(--n50);padding:6.9rem 0 7.6rem}
+.od-work-cols{display:grid;grid-template-columns:48% 52%;gap:35px}
+.od-work-left{padding-right:50px}
+.od-work h2{font-size:clamp(3.4rem,5.4vw,5.1rem);line-height:1.12}
+.od-work .od-rule{margin:2.1rem 0 1.6rem}
+.od-fine{font-size:.85rem;line-height:1.7;color:#5F726C;max-width:330px}
+.od-work-right{padding:.75rem 20px 0 55px;border-left:1px solid rgba(4,44,47,.16)}
+.od-work-right .od-body{max-width:580px}
+.od-quote{border-left:2px solid var(--beige);padding:2px 0 3px 22px;display:flex;gap:15px;margin:2.8rem 0 0}
+.od-quote-mark{font:55px/1 var(--fdisplay);color:var(--beige)}
+.od-quote p{font-family:var(--fdisplay);font-size:1.25rem;line-height:1.5;color:var(--purple);padding-top:.5rem;max-width:420px}
+.od-quote p span{display:block;font-family:var(--fbody);font-size:.62rem;letter-spacing:.17em;text-transform:uppercase;color:#8A744C;margin-top:.8rem}
+
+/* 06 de mens achter de professional — foto links, tekst rechts */
+.od-personal{background:var(--n100)}
+.od-personal-grid{display:grid;grid-template-columns:48% 52%;min-height:720px}
+.od-personal .od-pic{min-height:720px}
+.od-personal .od-pic img{object-position:48% 50%}
+.od-personal-copy{align-self:center;padding:6.4rem max(52px,calc((100% - 1300px)/2)) 6.4rem 9%}
+.od-personal h2{font-size:clamp(3.4rem,5.4vw,5.2rem);line-height:1.1}
+.od-personal .od-rule{margin:1.9rem 0}
+.od-personal .od-body{max-width:550px}
+
+/* 07 kennismaken — donkere afsluitband, gecentreerd */
+.od-meet{isolation:isolate}
+.od-meet-bg{position:absolute;inset:0;z-index:-1;opacity:.63;background:linear-gradient(90deg,rgba(4,44,47,.94),rgba(4,44,47,.86)),url('assets/home-contact.webp') center/cover no-repeat}
+.od-meet-core{padding:8.25rem 0 8.9rem;text-align:center;display:flex;flex-direction:column;align-items:center}
+.od-meet .od-rule{margin:0 0 2.2rem}
+.od-meet h2{font-size:clamp(4.2rem,7vw,6.75rem);line-height:1}
+.od-meet p{font-size:1.05rem;line-height:1.8;color:rgba(248,245,237,.85);max-width:520px;margin:1.75rem auto 2.25rem}
+
+@media(max-width:1100px){.od-hero-copy{padding:4rem 5vw 4.7rem 5vw}.od-hero h1{font-size:clamp(4rem,7vw,6rem)}}
+@media(max-width:960px){.od-personal-copy{padding:4rem 33px 4rem 45px}}
+@media(max-width:750px){
+  .od-hero-grid{display:flex;flex-direction:column;min-height:0}
+  .od-hero-pic{order:1;height:410px;min-height:0}
+  .od-hero-pic img{object-position:40% 43%}
+  .od-hero-copy{order:2;padding:3.1rem 20px 4.75rem}
+  .od-hero h1{font-size:clamp(3.6rem,14vw,5.2rem)}
+  .od-hero .od-rule{margin:1.6rem 0}
+  .od-hero-intro{font-size:.95rem;max-width:420px}
+  .od-drive{padding:4.9rem 0 5.3rem}
+  .od-drive-grid{grid-template-columns:1fr}
+  .od-drive-aside{display:none}
+  .od-drive h2{font-size:clamp(3.2rem,12vw,4.6rem);margin-bottom:1.7rem}
+  .od-body{font-size:.95rem}
+  .od-vision{min-height:0}
+  .od-vision-art{background-position:65% center}
+  .od-vision-inner{padding:4.9rem 0 5.5rem}
+  .od-vision h2{font-size:clamp(3.2rem,12vw,4.6rem)}
+  .od-vision blockquote{font-size:clamp(1.7rem,7vw,2.3rem)}
+  .od-vision .od-body{margin-top:2.2rem}
+  .od-base{padding:4.9rem 0 5.3rem}
+  .od-base-head{display:block;margin-bottom:2.8rem}
+  .od-base h2{font-size:clamp(3.1rem,12vw,4.3rem)}
+  .od-base-head p{margin-top:1.8rem;max-width:350px;padding:0}
+  .od-base-grid{grid-template-columns:1fr}
+  .od-item,.od-item:nth-child(even){border-left:0;padding:1.75rem 0 1.9rem;min-height:0}
+  .od-item h3{font-size:1.9rem;margin-bottom:.8rem}
+  .od-work{padding:4.75rem 0 5.3rem}
+  .od-work-cols{grid-template-columns:1fr}
+  .od-work-left{padding:0}
+  .od-work h2{font-size:clamp(3.1rem,11.5vw,4.5rem)}
+  .od-work .od-rule{margin:1.75rem 0 1.2rem}
+  .od-work-right{padding:1.75rem 0 0;border-left:0;border-top:1px solid rgba(4,44,47,.16)}
+  .od-quote{margin-top:1.9rem}
+  .od-personal-grid{grid-template-columns:1fr;min-height:0}
+  .od-personal .od-pic{height:355px;min-height:0}
+  .od-personal .od-pic img{object-position:center 54%}
+  .od-personal-copy{padding:4.5rem 20px 4.6rem}
+  .od-personal h2{font-size:clamp(3.1rem,11vw,4.3rem)}
+  .od-personal .od-rule{margin:1.7rem 0}
+  .od-meet-core{padding:5.7rem 0 6.4rem}
+  .od-meet h2{font-size:clamp(3.5rem,13vw,4.8rem)}
+  .od-meet p{font-size:.95rem}
+}
+
 </style>
 <!-- CMS:THEMECSS:END -->
 </head>

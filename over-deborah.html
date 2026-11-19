@@ -1010,6 +1010,137 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
   .hp-contact p{font-size:.9rem;max-width:315px}
 }
 
+/* ═══ OVER DEBORAH — designer-secties 01–07 (2026-11-19). Thema-fonts + knoppen; geen sectielabels. ═══ */
+.od-sec{position:relative;overflow:hidden}
+.od-sec h1,.od-sec h2,.od-sec h3{font-family:var(--fdisplay);font-weight:400;margin:0;color:var(--purple);letter-spacing:-.02em;text-wrap:balance}
+.od-sec h1 em,.od-sec h2 em{font-style:italic;-webkit-text-fill-color:currentColor}
+.od-sec p{margin:0}
+.od-dark{background:var(--purple);color:var(--n50)}
+.od-dark h1,.od-dark h2{color:var(--n50)}
+.od-rule{display:block;width:52px;height:1px;background:var(--beige)}
+.od-body{font-size:1.02rem;line-height:1.8;color:#5F726C}
+.od-body+.od-body{margin-top:1.4rem}
+.od-dark .od-body{color:rgba(248,245,237,.82)}
+.od-pic,.od-hero-pic{position:relative;overflow:hidden}
+.od-pic img,.od-hero-pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* 01 hero — split: tekst links op donkergroen, portret rechts (onder de menubalk) */
+.od-hero{padding-top:87px}
+.od-hero-grid{display:grid;grid-template-columns:47% 53%;min-height:680px}
+.od-hero-copy{display:flex;flex-direction:column;justify-content:center;padding:4.5rem 6vw 6rem max(52px,calc((100% - 1320px)/2))}
+.od-hero h1{font-size:clamp(4.2rem,6.6vw,7.2rem);line-height:1.02;white-space:nowrap}
+.od-hero .od-rule{margin:2.3rem 0}
+.od-name{font-size:.68rem;font-weight:600;letter-spacing:.29em;text-transform:uppercase;color:var(--beige)}
+.od-hero-intro{font-size:1.05rem;line-height:1.85;color:rgba(248,245,237,.8);max-width:360px;margin-top:1.1rem!important}
+.od-hero-pic{min-height:680px}
+.od-hero-pic img{object-position:35% 50%;filter:saturate(.78)}
+
+/* 02 wat mij drijft — één leeskolom, veel witruimte */
+.od-drive{background:var(--n50);padding:7rem 0 7.8rem}
+.od-drive-grid{display:grid;grid-template-columns:28% 72%}
+.od-drive-aside{padding-top:2.2rem}
+.od-drive-article{max-width:710px}
+.od-drive h2{font-size:clamp(3.8rem,6vw,5.9rem);line-height:1.06;margin-bottom:2.2rem}
+
+/* 03 hoe ik naar mensen kijk — donker met architectuur aan één zijde */
+.od-vision{min-height:760px;isolation:isolate}
+.od-vision-art{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(4,44,47,.94) 4%,rgba(4,44,47,.86) 46%,rgba(4,44,47,.24) 100%),url('assets/home-visie.webp') center/cover no-repeat}
+.od-vision-inner{padding:6.6rem 0 7.8rem}
+.od-vision h2{font-size:clamp(3.7rem,6vw,5.8rem);line-height:1.05}
+.od-vision .od-rule{margin:2.4rem 0 2.1rem}
+.od-vision blockquote{margin:0;padding:0;border:0;background:none;font-family:var(--fdisplay);font-style:normal;font-size:clamp(1.9rem,3.2vw,3.05rem);line-height:1.25;max-width:800px;color:var(--n50)}
+.od-vision .od-body{margin-top:2.7rem;max-width:590px}
+
+/* 04 de professionele basis — 2×2 met dunne lijnen */
+.od-base{background:var(--n100);padding:7rem 0 7.25rem}
+.od-base-head{display:grid;grid-template-columns:1.3fr .65fr;gap:75px;align-items:end;margin-bottom:4.7rem}
+.od-base h2{font-size:clamp(3.7rem,5.7vw,5.5rem);line-height:1.1}
+.od-base-head p{font-size:.95rem;line-height:1.7;color:#5F726C;padding-bottom:.6rem}
+.od-base-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid rgba(4,44,47,.16)}
+.od-item{padding:2.3rem 4rem 2.4rem 0;border-bottom:1px solid rgba(4,44,47,.16);min-height:210px}
+.od-item:nth-child(even){border-left:1px solid rgba(4,44,47,.16);padding-left:3.4rem}
+.od-num{font-size:.68rem;letter-spacing:.17em;color:#8A744C;margin-bottom:1.2rem}
+.od-item h3{font-size:2.25rem;line-height:1.1;margin-bottom:1.1rem}
+.od-item p{font-size:.88rem;line-height:1.65;color:#5F726C;max-width:360px}
+
+/* 05 wat je van mij kunt verwachten — kop links, tekstkolom rechts met lijn */
+.od-work{background:var(--n50);padding:6.9rem 0 7.6rem}
+.od-work-cols{display:grid;grid-template-columns:48% 52%;gap:35px}
+.od-work-left{padding-right:50px}
+.od-work h2{font-size:clamp(3.4rem,5.4vw,5.1rem);line-height:1.12}
+.od-work .od-rule{margin:2.1rem 0 1.6rem}
+.od-fine{font-size:.85rem;line-height:1.7;color:#5F726C;max-width:330px}
+.od-work-right{padding:.75rem 20px 0 55px;border-left:1px solid rgba(4,44,47,.16)}
+.od-work-right .od-body{max-width:580px}
+.od-quote{border-left:2px solid var(--beige);padding:2px 0 3px 22px;display:flex;gap:15px;margin:2.8rem 0 0}
+.od-quote-mark{font:55px/1 var(--fdisplay);color:var(--beige)}
+.od-quote p{font-family:var(--fdisplay);font-size:1.25rem;line-height:1.5;color:var(--purple);padding-top:.5rem;max-width:420px}
+.od-quote p span{display:block;font-family:var(--fbody);font-size:.62rem;letter-spacing:.17em;text-transform:uppercase;color:#8A744C;margin-top:.8rem}
+
+/* 06 de mens achter de professional — foto links, tekst rechts */
+.od-personal{background:var(--n100)}
+.od-personal-grid{display:grid;grid-template-columns:48% 52%;min-height:720px}
+.od-personal .od-pic{min-height:720px}
+.od-personal .od-pic img{object-position:48% 50%}
+.od-personal-copy{align-self:center;padding:6.4rem max(52px,calc((100% - 1300px)/2)) 6.4rem 9%}
+.od-personal h2{font-size:clamp(3.4rem,5.4vw,5.2rem);line-height:1.1}
+.od-personal .od-rule{margin:1.9rem 0}
+.od-personal .od-body{max-width:550px}
+
+/* 07 kennismaken — donkere afsluitband, gecentreerd */
+.od-meet{isolation:isolate}
+.od-meet-bg{position:absolute;inset:0;z-index:-1;opacity:.63;background:linear-gradient(90deg,rgba(4,44,47,.94),rgba(4,44,47,.86)),url('assets/home-contact.webp') center/cover no-repeat}
+.od-meet-core{padding:8.25rem 0 8.9rem;text-align:center;display:flex;flex-direction:column;align-items:center}
+.od-meet .od-rule{margin:0 0 2.2rem}
+.od-meet h2{font-size:clamp(4.2rem,7vw,6.75rem);line-height:1}
+.od-meet p{font-size:1.05rem;line-height:1.8;color:rgba(248,245,237,.85);max-width:520px;margin:1.75rem auto 2.25rem}
+
+@media(max-width:1100px){.od-hero-copy{padding:4rem 5vw 4.7rem 5vw}.od-hero h1{font-size:clamp(4rem,7vw,6rem)}}
+@media(max-width:960px){.od-personal-copy{padding:4rem 33px 4rem 45px}}
+@media(max-width:750px){
+  .od-hero-grid{display:flex;flex-direction:column;min-height:0}
+  .od-hero-pic{order:1;height:410px;min-height:0}
+  .od-hero-pic img{object-position:40% 43%}
+  .od-hero-copy{order:2;padding:3.1rem 20px 4.75rem}
+  .od-hero h1{font-size:clamp(3.6rem,14vw,5.2rem)}
+  .od-hero .od-rule{margin:1.6rem 0}
+  .od-hero-intro{font-size:.95rem;max-width:420px}
+  .od-drive{padding:4.9rem 0 5.3rem}
+  .od-drive-grid{grid-template-columns:1fr}
+  .od-drive-aside{display:none}
+  .od-drive h2{font-size:clamp(3.2rem,12vw,4.6rem);margin-bottom:1.7rem}
+  .od-body{font-size:.95rem}
+  .od-vision{min-height:0}
+  .od-vision-art{background-position:65% center}
+  .od-vision-inner{padding:4.9rem 0 5.5rem}
+  .od-vision h2{font-size:clamp(3.2rem,12vw,4.6rem)}
+  .od-vision blockquote{font-size:clamp(1.7rem,7vw,2.3rem)}
+  .od-vision .od-body{margin-top:2.2rem}
+  .od-base{padding:4.9rem 0 5.3rem}
+  .od-base-head{display:block;margin-bottom:2.8rem}
+  .od-base h2{font-size:clamp(3.1rem,12vw,4.3rem)}
+  .od-base-head p{margin-top:1.8rem;max-width:350px;padding:0}
+  .od-base-grid{grid-template-columns:1fr}
+  .od-item,.od-item:nth-child(even){border-left:0;padding:1.75rem 0 1.9rem;min-height:0}
+  .od-item h3{font-size:1.9rem;margin-bottom:.8rem}
+  .od-work{padding:4.75rem 0 5.3rem}
+  .od-work-cols{grid-template-columns:1fr}
+  .od-work-left{padding:0}
+  .od-work h2{font-size:clamp(3.1rem,11.5vw,4.5rem)}
+  .od-work .od-rule{margin:1.75rem 0 1.2rem}
+  .od-work-right{padding:1.75rem 0 0;border-left:0;border-top:1px solid rgba(4,44,47,.16)}
+  .od-quote{margin-top:1.9rem}
+  .od-personal-grid{grid-template-columns:1fr;min-height:0}
+  .od-personal .od-pic{height:355px;min-height:0}
+  .od-personal .od-pic img{object-position:center 54%}
+  .od-personal-copy{padding:4.5rem 20px 4.6rem}
+  .od-personal h2{font-size:clamp(3.1rem,11vw,4.3rem)}
+  .od-personal .od-rule{margin:1.7rem 0}
+  .od-meet-core{padding:5.7rem 0 6.4rem}
+  .od-meet h2{font-size:clamp(3.5rem,13vw,4.8rem)}
+  .od-meet p{font-size:.95rem}
+}
+
 </style>
 <!-- CMS:THEMECSS:END -->
 </head>
@@ -1018,97 +1149,88 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
 <header class="site-header" id="siteHeader"><nav class="nav"><a href="index.html" class="logo" aria-label="Van der Burg Coaching home"><img src="assets/vanderburg-logo-header.svg" alt="Van der Burg Coaching &amp; Relatietherapie"></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="over-deborah.html" class="active">Over Deborah</a></li><li class="has-sub"><a href="aanbod.html">Aanbod</a><div class="submenu"><ul class="submenu-inner"><li><a href="aanbod.html">Aanbod</a></li><li><a href="relaties.html">Relaties</a></li><li><a href="coaching.html">Coaching</a></li><li><a href="training.html">Training</a></li></ul></div></li><li class="has-sub"><a href="werkwijze.html">Werkwijze</a><div class="submenu"><ul class="submenu-inner"><li><a href="werkwijze.html">Werkwijze</a></li><li><a href="tarieven.html">Tarieven</a></li></ul></div></li><li><a href="artikelen.html">Artikelen</a></li><li><a href="contact.html">Contact</a></li></ul><a href="contact.html" class="btn btn-cta cta">Gratis Kennismaking</a><button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></nav><div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="over-deborah.html">Over Deborah</a><a href="aanbod.html">Aanbod</a><a href="aanbod.html" class="msub">— Aanbod</a><a href="relaties.html" class="msub">— Relaties</a><a href="coaching.html" class="msub">— Coaching</a><a href="training.html" class="msub">— Training</a><a href="werkwijze.html">Werkwijze</a><a href="werkwijze.html" class="msub">— Werkwijze</a><a href="tarieven.html" class="msub">— Tarieven</a><a href="artikelen.html">Artikelen</a><a href="contact.html">Contact</a><a href="contact.html" class="btn btn-cta">Gratis Kennismaking</a></div></header>
 <!-- CMS:HEADER:END -->
 <main>
-<section class="ab-hero">
-  <div class="container">
-    <div class="ab-hero-txt">
-      <span class="label">Over Deborah van der Burg</span>
-      <span class="ab-rule"></span>
-      <h1>Van overleven naar leven in <em>balans, regie en verbinding</em></h1>
-      <span class="ab-rule"></span>
-      <p class="lead">Welkom, ik ben Deborah van der Burg — relatietherapeute, coach en gids voor mensen die vastlopen in hun relaties, zichzelf of hun werk.</p>
+<section class="od-sec od-hero od-dark" aria-label="Over Deborah">
+  <div class="od-hero-grid">
+    <div class="od-hero-copy">
+      <h1>Over <em>Deborah</em></h1>
+      <span class="od-rule"></span>
+      <p class="od-name">Deborah van der Burg</p>
+      <p class="od-hero-intro">Relatietherapeute, coach en gids voor mensen die vastlopen in hun relaties, zichzelf of hun werk — vanuit mijn praktijk in Noordwijk.</p>
     </div>
+    <div class="od-hero-pic"><img src="assets/home-hero.webp" alt="Portret van Deborah van der Burg" width="2048" height="1365" fetchpriority="high"></div>
   </div>
-  <div class="ab-hero-img"><img src="images/deborah-relatie.webp" alt="Deborah van der Burg"></div>
 </section>
 
-<section class="ab-body">
-  <div class="container">
-    <div class="ab-story">
-      <div class="ab-main">
-        <h2>Mijn verhaal</h2>
-        <p>Vanuit mijn praktijk in Noordwijk help ik professionals en stellen in Zuid-Holland hun patronen doorbreken en authentiek leven. Mijn verhaal begint met een burn-out en eindigt met een missie: iedereen de kans geven op een bewust, lekker en gelukkig leven.</p>
-
-        <h3>Van corporate executive support naar persoonlijke crisis</h3>
-        <p>18 jaar lang ondersteunde ik CEO's van multinationals bij hun zwaarste uitdagingen. Dagelijks pendelde ik naar de Amsterdamse Zuidas, waar ik teams herstelde, crises oploste en executives coachte onder hoge druk. Tegelijkertijd was ik moeder, echtgenote, vrijwilliger bij de hockey en lid van Ladies Circle — en natuurlijk, zoals "iedere vrouw", verantwoordelijk voor het huishouden.</p>
-        <p>Mijn drive om het op alle gebieden heel goed te doen, de lat sky high te leggen, niet 100% maar 200% geven — dit was mijn realiteit. Voor minder ging ik niet. Klinkt dit bekend?</p>
-
-        <h3>De onvermijdelijke burn-out van 2019</h3>
-        <p>Vijf dagen per week Amsterdam, drie dagen kinderen ophalen, een verbouwing, verenigingen, sociaal leven — het was te veel. Maar in plaats van naar mezelf te kijken, wees ik naar de buitenwereld.</p>
-        <blockquote class="ab-inline-quote">"Het was heerlijk en gemakkelijk mijn burn-out te wijten aan mijn harde werken, 'onverwerkte' situaties, een ingewikkelde jeugd en het wijzen naar anderen in mijn omgeving."</blockquote>
-
-        <h3>De doorbraak: V-Cirkel Academy</h3>
-        <p>Ik had al menig psycholoog gesproken, weinig succesvol. Tot ik de V-Cirkel Academy ontdekte. Voor het eerst werd ik confronterend maar liefdevol geconfronteerd met mijn eigen aandeel. Een waanzinnige eye-opener:</p>
-        <ul>
-          <li><strong>Van onbewust naar bewust</strong> — eindelijk begrijpen waarom ik deed wat ik deed</li>
-          <li><strong>Regie, keuze en balans</strong> — niet meer als slachtoffer van omstandigheden</li>
-          <li><strong>Begrijpen van systemen</strong> — hoe ik en mijn omgeving werkten</li>
-          <li><strong>Ware communicatie</strong> — "je kunt communiceren tot je een ons weegt, maar wanneer je elkaar niet begrijpt is het stille chaos"</li>
-        </ul>
-        <p>Dé sleutel tot ware verbinding: jezelf begrijpen, de wereld van de ander willen begrijpen, naar elkaar luisteren en openstaan voor elkaars wereld.</p>
-      </div>
-
-      <aside class="ab-side">
-        <blockquote class="ab-quote"><p>De spiegels waarin ik je laat kijken zijn mooi en confronterend tegelijk. Maar zonder schuring geen glans.</p></blockquote>
-        <figure>
-          <img src="images/praktijk-noordwijk.webp" alt="De praktijkruimte van Van der Burg Coaching in Noordwijk" loading="lazy">
-          <figcaption><span class="label">De praktijk</span><h3>Waar transformatie plaatsvindt</h3><p>Een rustige, warme praktijkruimte in het hart van de Bollenstreek. Weg van de werkstress en stadsdrukte — een plek voor reflectie, privacy en nieuwe inzichten. Ook online coaching is mogelijk voor heel Zuid-Holland.</p></figcaption>
-        </figure>
-      </aside>
-    </div>
-
-    <div class="ab-edu">
-      <h2>Mijn ontwikkeling: continu leren en groeien</h2>
-      <span class="ab-rule"></span>
-      <p>Een unieke combinatie van corporate expertise en persoonlijke transformatie die weinig coaches hebben.</p>
-      <div class="ab-cols">
-        <div class="ab-col">
-          <span class="label">Opleidingen &amp; trainingen</span>
-          <ul class="ab-checks">
-            <li><strong>EFT-Relatietherapie (2024)</strong><span>Stichting EFT Nederland — de methodiek van Dr. Sue Johnson. Emotionally Focused Therapy, wetenschappelijk bewezen effectief, met specialisatie in het herstellen van de emotionele verbinding tussen partners (70-73% succes in volledig herstel).</span></li>
-            <li><strong>V-Cirkel Topclass Level 4 (2023)</strong><span>Het hoogste niveau van de V-Cirkel Academy: verfijning van gesprekstechnieken en interventies, diepere psychologie en expertise in complexe coachingsituaties.</span></li>
-            <li><strong>Post-HBO Level 2 &amp; 3 (2019-2022)</strong><span>V-Cirkel Academy — Enneagram-gebaseerde coaching. Subtypes en instincten, organisatorische toepassingen, teamdynamiek, leiderschap en conflictresolutie.</span></li>
-            <li><strong>NOBCO Coaching (2013-2014)</strong><span>Coaching Academy International — geaccrediteerde opleiding, geregistreerd bij NOBCO/EMCC. De basis voor professioneel coachen en leidinggevende ontwikkeling.</span></li>
-          </ul>
-        </div>
-        <div class="ab-col">
-          <span class="label">Waarom mijn ervaring waardevol is voor jou</span>
-          <ul class="ab-checks">
-            <li><strong>18 jaar executive support</strong> — ik ken de druk van het bedrijfsleven</li>
-            <li><strong>Persoonlijke burn-out ervaring</strong> — ik weet hoe uitputting voelt</li>
-            <li><strong>Eigen transformatie</strong> — van 200% geven naar bewust leven</li>
-            <li><strong>Systemisch begrip</strong> — hoe jij en je omgeving werken</li>
-            <li><strong>Praktische handvatten</strong> — tools die echt werken</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="ab-facts">
-      <div class="ab-fact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7.5" width="18" height="12" rx="1.5"/><path d="M9 7.5V5.2h6v2.3M3 13h18"/></svg><span>18 jaar executive support</span></div>
-      <div class="ab-fact"><svg viewBox="1.0 4.3 21.2 14.3" aria-hidden="true"><path d="M1.8 18.6A3.7 3.7 0 0 1 7.5 15.1"/><circle cx="5.4" cy="10.8" r="2.1"/><path d="M22.2 18.6A3.7 3.7 0 0 0 16.5 15.1"/><circle cx="18.6" cy="10.8" r="2.1"/><path d="M6.3 18.6A5.7 5.7 0 0 1 17.7 18.6"/><circle cx="12" cy="7.8" r="2.7"/></svg><span>450+ mensen geholpen</span></div>
-      <div class="ab-fact"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.6"/><path d="M12 7.2V12l3.2 2"/></svg><span>4000+ uur aan ervaring</span></div>
+<section class="od-sec od-drive" aria-label="Wat mij drijft">
+  <div class="hp-wrap od-drive-grid">
+    <div class="od-drive-aside"><span class="od-rule"></span></div>
+    <div class="od-drive-article">
+      <h2>Wat mij <em>drijft.</em></h2>
+      <p class="od-body">Achttien jaar lang ondersteunde ik CEO's van multinationals bij hun zwaarste uitdagingen. Ik gaf niet 100% maar 200% — op mijn werk, thuis en daarbuiten. In 2019 werd het te veel: een burn-out. En in plaats van naar mezelf te kijken, wees ik naar de buitenwereld.</p>
+      <p class="od-body">Pas bij de V-Cirkel Academy werd ik confronterend maar liefdevol geconfronteerd met mijn eigen aandeel. Dat werd mijn keerpunt, en mijn missie: iedereen de kans geven op een bewust, lekker en gelukkig leven.</p>
     </div>
   </div>
 </section>
 
-<section class="ab-drive">
-  <div class="container">
-    <div class="ab-drive-txt">
-      <h2>Preventie als sleutel</h2>
-      <p>Ik geloof dat <strong>preventie de sleutel is</strong> tot gezonde relaties en persoonlijk welzijn. Door vroegtijdig te investeren in zelfkennis voorkom je dat kleine problemen uitgroeien tot grote crises.</p>
-      <p>Te vaak zie ik dat mensen wachten tot het te laat is — tot ze zelf overspannen of burn-out zijn, of de schade in hun relatie zo groot is dat herstel bijna onmogelijk lijkt. Daarom richt ik me op <strong>vroege signaalherkenning</strong> en het ontwikkelen van duurzame vaardigheden — zodat je niet alleen een crisis oplost, maar er een krijgt die niet terugkomt.</p>
-      <a href="contact.html" class="btn btn-cta">Gratis Kennismaking</a>
+<section class="od-sec od-vision od-dark" aria-label="Hoe ik naar mensen kijk">
+  <div class="od-vision-art" aria-hidden="true"></div>
+  <div class="hp-wrap od-vision-inner">
+    <h2>Hoe ik naar mensen <em>kijk.</em></h2>
+    <span class="od-rule"></span>
+    <blockquote>“De spiegels waarin ik je laat kijken zijn mooi en confronterend tegelijk. Maar zonder schuring geen glans.”</blockquote>
+    <p class="od-body">Je kunt communiceren tot je een ons weegt, maar wanneer je elkaar niet begrijpt is het stille chaos. De sleutel tot verbinding: jezelf begrijpen, de wereld van de ander willen begrijpen, naar elkaar luisteren en openstaan voor elkaars wereld.</p>
+  </div>
+</section>
+
+<section class="od-sec od-base" aria-label="Achtergrond en expertise">
+  <div class="hp-wrap">
+    <div class="od-base-head">
+      <h2>De professionele <em>basis.</em></h2>
+      <p>Een combinatie van corporate ervaring en persoonlijke transformatie: 18 jaar executive support, aangevuld met erkende opleidingen in coaching, relatietherapie en het Enneagram.</p>
     </div>
+    <div class="od-base-grid">
+      <article class="od-item"><div class="od-num">01</div><h3>Coaching</h3><p>Geaccrediteerde opleiding bij Coaching Academy International (2013–2014), geregistreerd bij NOBCO/EMCC.</p></article>
+      <article class="od-item"><div class="od-num">02</div><h3>EFT-relatietherapie</h3><p>Stichting EFT Nederland (2024): de methodiek van Dr. Sue Johnson voor het herstellen van de emotionele verbinding.</p></article>
+      <article class="od-item"><div class="od-num">03</div><h3>Enneagram &amp; drijfveren</h3><p>V-Cirkel Academy, Post-HBO Level 2 &amp; 3 (2019–2022): teamdynamiek, leiderschap en conflictresolutie.</p></article>
+      <article class="od-item"><div class="od-num">04</div><h3>V-Cirkel Topclass</h3><p>Level 4 (2023), het hoogste niveau van de V-Cirkel Academy: verfijnde gesprekstechnieken en interventies.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="od-sec od-work" aria-label="Wat je van mij kunt verwachten">
+  <div class="hp-wrap od-work-cols">
+    <div class="od-work-left">
+      <h2>Wat je van mij kunt <em>verwachten.</em></h2>
+      <span class="od-rule"></span>
+      <p class="od-fine">Rustig, helder en zonder oordeel.</p>
+    </div>
+    <div class="od-work-right">
+      <p class="od-body">In een veilige, warme setting gaan we samen aan de slag. Ik luister, spiegel en geef je concrete handvatten — of je nu individueel komt of samen met je partner. Geen lange wachtlijsten, wel persoonlijke aandacht.</p>
+      <p class="od-body">Ik ken de druk van het bedrijfsleven en weet uit eigen ervaring hoe uitputting voelt. Daarom krijg je geen vage theorieën, maar praktische handvatten die werken — en zicht op hoe jij en je omgeving werken.</p>
+      <figure class="od-quote"><span class="od-quote-mark" aria-hidden="true">“</span><p>In korte tijd zoveel geleerd over mezelf, maar ook over mijn partner.<span>— Sigrid V., Noordwijk</span></p></figure>
+    </div>
+  </div>
+</section>
+
+<section class="od-sec od-personal" aria-label="De mens achter de professional">
+  <div class="od-personal-grid">
+    <div class="od-pic"><img src="assets/over-werk.webp" alt="Deborah aan het werk aan haar tafel in de praktijk" width="1600" height="1066" loading="lazy"></div>
+    <div class="od-personal-copy">
+      <h2>De mens achter de <em>professional.</em></h2>
+      <span class="od-rule"></span>
+      <p class="od-body">Jarenlang combineerde ik mijn werk aan de Zuidas met het moederschap, kinderen ophalen, een verbouwing, de hockeyclub en Ladies Circle. Ik weet dus hoe het is om alle ballen in de lucht te willen houden.</p>
+      <p class="od-body">Mijn praktijk ligt in Noordwijk, in het hart van de Bollenstreek: een rustige, warme ruimte, weg van werkstress en stadsdrukte. Iedere dag mag ik vol bewondering en geboeid luisteren naar de verhalen van mensen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="od-sec od-meet od-dark" aria-label="Kennismaken">
+  <div class="od-meet-bg" aria-hidden="true"></div>
+  <div class="hp-wrap od-meet-core">
+    <span class="od-rule"></span>
+    <h2>Kennismaken?</h2>
+    <p>Plan een gratis en vrijblijvend kennismakingsgesprek, in mijn praktijk in Noordwijk of online. Samen ontdekken we wat er speelt en of het klikt.</p>
+    <a href="contact.html" class="btn btn-cta">Contact opnemen</a>
   </div>
 </section>
 </main>
