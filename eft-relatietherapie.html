@@ -432,10 +432,9 @@ img{max-width:100%;display:block}
 .btn-wa:hover{background:#1fb955;color:#fff;transform:translateY(-2px)}
 .btn-wa svg{width:18px;height:18px;fill:#fff;flex-shrink:0}
 
-/* Site-breedte centreren op brede schermen */
-html{background:#fff}
-body{max-width:1500px;margin-inline:auto;overflow-x:clip}
-.site-header{left:50%;right:auto;transform:translateX(-50%);width:min(100%,1500px)}
+/* Brede schermen: secties lopen door tot de schermrand (achtergrond/foto), de inhoud blijft binnen de eigen containers */
+html{background:var(--n50)}
+body{overflow-x:clip}
 
 /* Carousel — horizontaal scrollend, onbeperkt aantal items */
 .carousel{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:.25rem 0 1rem;scrollbar-width:thin}
