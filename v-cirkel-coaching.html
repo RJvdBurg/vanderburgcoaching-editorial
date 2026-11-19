@@ -848,6 +848,203 @@ a.pillar:hover{background:rgba(203,184,159,.08)}
   .hero-bg{min-height:0!important;background-size:100% auto!important;background-position:center bottom!important;padding-bottom:70vw!important}
 }
 
+/* ═══ HOMEPAGE — designer-secties 01–09 (2026-11-19). Fonts + knoppen blijven die van het thema. ═══ */
+.hp-sec{position:relative;overflow:hidden}
+.hp-wrap{width:min(100% - 104px,1320px);margin-inline:auto}
+.hp-sec h1,.hp-sec h2,.hp-sec h3{font-family:var(--fdisplay);font-weight:400;margin:0;text-wrap:balance}
+.hp-sec h2{color:var(--purple);letter-spacing:-.02em}
+.hp-sec h2 em,.hp-sec h1 em{font-style:italic;-webkit-text-fill-color:currentColor}
+.hp-eyebrow{display:flex;align-items:center;gap:18px;font-family:var(--fbody);font-size:.68rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#8A744C;margin-bottom:2.4rem}
+.hp-eyebrow::after{content:"";width:55px;height:1px;background:currentColor;opacity:.8}
+.hp-eyebrow.plain::after{display:none}
+.hp-line{display:block;width:55px;height:1px;background:var(--beige)}
+.hp-dark{background:var(--purple);color:var(--n50)}
+.hp-dark h1,.hp-dark h2{color:var(--n50)}
+.hp-dark .hp-eyebrow{color:var(--beige)}
+.hp-sec .textlink{display:inline-flex;align-items:center;margin-top:2.2rem;padding-bottom:.7rem;border-bottom:1px solid var(--beige);text-decoration:none}
+.hp-dark .textlink{color:var(--beige)}
+.hp-photo{position:relative;overflow:hidden}
+.hp-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+
+/* 01 hero — portret beeldvullend, tekst rechts op het donkere deel */
+.hp-hero{height:min(900px,100svh);min-height:670px;isolation:isolate;display:flex;align-items:center}
+.hp-hero-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:44% 36%;filter:brightness(.74) saturate(.62)}
+.hp-hero-wash{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(4,44,47,.25) 0%,rgba(4,44,47,.5) 44%,rgba(4,44,47,.92) 73%,rgba(4,44,47,.96) 100%),linear-gradient(0deg,rgba(4,44,47,.42),transparent 50%)}
+.hp-hero-inner{width:min(100% - 104px,1320px);margin-inline:auto;display:flex;justify-content:flex-end;padding-top:87px}
+.hp-hero-copy{width:min(58%,745px);padding-bottom:52px}
+.hp-hero h1{font-size:clamp(3.2rem,5.4vw,6rem);line-height:1.07;letter-spacing:-.035em;max-width:760px}
+.hp-hero .hp-line{width:76px;margin:2.5rem 0 2.4rem}
+.hp-edge{position:absolute;bottom:35px;left:max(52px,calc((100% - 1320px)/2));font-size:.62rem;letter-spacing:.3em;opacity:.6}
+
+/* 02 herkenning — typografisch, drie kolommen met dunne lijnen */
+.hp-recog{background:var(--n50);padding:7rem 0 6.5rem}
+.hp-recog-top{display:grid;grid-template-columns:1.55fr .65fr;gap:100px;align-items:end;margin-bottom:6.5rem}
+.hp-recog h2{font-size:clamp(3.2rem,5.2vw,5.6rem);line-height:1.09}
+.hp-intro{font-size:1.05rem;line-height:1.75;color:#5F726C;max-width:320px;padding-bottom:.75rem;margin:0}
+.hp-areas{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(4,44,47,.16)}
+.hp-area{padding:1.7rem 2rem .6rem 0;border-right:1px solid rgba(4,44,47,.16)}
+.hp-area+.hp-area{padding-left:2rem}
+.hp-area:last-child{border-right:0}
+.hp-num{font-size:.62rem;letter-spacing:.12em;color:#8A744C}
+.hp-area h3{font-size:1.9rem;margin:1.4rem 0 .9rem;color:var(--purple)}
+.hp-area p{font-size:.85rem;line-height:1.6;color:#5F726C;margin:0}
+
+/* 03 visie — tekst links, verticaal architectuurbeeld rechts */
+.hp-vision{display:grid;grid-template-columns:1fr 1fr;min-height:790px;background:var(--n100)}
+.hp-vision-copy{display:flex;align-items:center;padding:90px 0}
+.hp-vision-inner{width:min(100% - 112px,570px);margin-inline:auto}
+.hp-vision h2{font-size:clamp(3.2rem,4.8vw,5.2rem);line-height:1.1}
+.hp-vision .hp-line,.hp-about .hp-line{margin:2.6rem 0 1.75rem}
+.hp-vision p,.hp-about p{font-size:1.05rem;line-height:1.75;color:#5F726C;max-width:440px;margin:0}
+.hp-vision .hp-photo{min-height:790px}
+.hp-vision .hp-photo img{object-position:50% 49%}
+
+/* 04 perspectief — rustig donker vlak, gecentreerde uitspraak */
+.hp-persp{min-height:660px;display:flex;align-items:center;justify-content:center;text-align:center;isolation:isolate}
+.hp-persp::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 15% 20%,rgba(138,180,158,.12),transparent 58%),radial-gradient(ellipse at 95% 92%,rgba(1,23,22,.5),transparent 60%)}
+.hp-persp-inner{max-width:1100px;padding:87px 20px}
+.hp-persp .hp-eyebrow{justify-content:center;margin-bottom:1.6rem}
+.hp-persp h2{font-size:clamp(3.2rem,6vw,6.1rem);line-height:1.11;letter-spacing:-.04em}
+.hp-persp .hp-line{margin:3rem auto 1.7rem}
+.hp-persp p{font-size:1rem;color:rgba(248,245,237,.8);margin:0}
+
+/* 05 aanbod + 06 werkwijze — kop met korte intro */
+.hp-head{display:flex;justify-content:space-between;align-items:end;gap:60px}
+.hp-head .hp-eyebrow{margin-bottom:1.6rem}
+.hp-head h2{font-size:clamp(3.2rem,5vw,5.2rem);line-height:1.1}
+.hp-head>p{max-width:330px;color:#5F726C;font-size:.95rem;line-height:1.7;padding-bottom:.6rem;margin:0}
+.hp-offer{background:var(--n50);padding:6.8rem 0 7.5rem}
+.hp-offer .hp-head{margin-bottom:3.75rem}
+.hp-offer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.hp-card{min-height:440px;border:1px solid rgba(4,44,47,.16);padding:36px 34px;display:flex;flex-direction:column;position:relative;color:inherit;text-decoration:none!important;transition:background .2s,border-color .2s}
+.hp-card:hover{background:var(--n100);border-color:var(--beige)}
+.hp-card-id{font-size:.6rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#5F726C}
+.hp-card img{width:120px;height:118px;object-fit:contain;align-self:center;margin:56px 0 25px}
+.hp-card h3{font-size:2.8rem;line-height:1.1;margin:0 0 .6rem;color:var(--purple)}
+.hp-card p{font-size:.82rem;line-height:1.55;color:#5F726C;margin:0;padding-right:2rem}
+.hp-card-arrow{position:absolute;right:34px;bottom:31px;color:#8A744C;font-size:1.4rem;transition:transform .2s}
+.hp-card:hover .hp-card-arrow{transform:translateX(4px)}
+.hp-method{background:var(--n100);padding:7.2rem 0}
+.hp-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:5rem}
+.hp-step-head{display:flex;align-items:center;gap:18px;margin-bottom:1.9rem}
+.hp-step-head span{display:flex;align-items:center;justify-content:center;flex:none;width:60px;height:60px;border:1px solid var(--beige);border-radius:50%;color:#8A744C;font-size:.7rem;letter-spacing:.05em}
+.hp-step-head i{flex:1;height:1px;background:rgba(4,44,47,.18)}
+.hp-step:last-child .hp-step-head i{display:none}
+.hp-step h3{font-size:2rem;margin:0 0 .75rem;color:var(--purple)}
+.hp-step p{font-size:.88rem;line-height:1.6;color:#5F726C;margin:0;max-width:340px}
+.hp-method .textlink{margin-top:4.2rem}
+
+/* 07 ervaringen — één echte reactie als redactioneel statement */
+.hp-proof{padding:6.25rem 0 4rem}
+.hp-proof-inner{display:flex;flex-direction:column;min-height:625px}
+.hp-proof-main{margin:auto 0;padding:2rem 0 3.5rem;text-align:center}
+.hp-quote-mark{color:var(--beige);font:100px/.9 var(--fdisplay);height:75px}
+.hp-proof blockquote{margin:0 auto;padding:0;border:0;background:none;max-width:1050px;font-family:var(--fdisplay);font-style:normal;font-size:clamp(2rem,3.3vw,3.3rem);line-height:1.25;letter-spacing:-.02em;color:var(--n50)}
+.hp-attrib{font-size:.62rem;letter-spacing:.17em;text-transform:uppercase;color:rgba(248,245,237,.7);margin-top:2.4rem}
+.hp-proof-bottom{border-top:1px solid rgba(248,245,237,.22);padding-top:1.6rem;display:flex;align-items:center;justify-content:space-between;gap:35px;color:rgba(248,245,237,.82);font-size:.72rem}
+.hp-proof-bottom .textlink{margin-top:0}
+.hp-cred{display:flex;gap:28px;align-items:center;letter-spacing:.04em}
+.hp-cred b{color:var(--beige);font-weight:500;letter-spacing:.13em}
+
+/* 08 over Deborah — foto links, introductie rechts */
+.hp-about{display:grid;grid-template-columns:50% 50%;min-height:770px;background:var(--n50)}
+.hp-about .hp-photo{min-height:770px}
+.hp-about .hp-photo img{object-position:57% 49%;filter:saturate(.76)}
+.hp-about-copy{display:flex;align-items:center;padding:80px 50px 80px 90px}
+.hp-about-inner{width:min(100%,580px)}
+.hp-about h2{font-size:clamp(3.6rem,5.6vw,6.2rem);line-height:1.02}
+.hp-about h2 span{color:var(--beige)}
+
+/* 09 contact — architectuurpanorama met één heldere vervolgstap */
+.hp-contact{min-height:760px;display:flex;flex-direction:column;isolation:isolate}
+.hp-contact-bg{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:60% center;filter:saturate(.87) brightness(.78)}
+.hp-contact-wash{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(4,44,47,.87),rgba(4,44,47,.54) 60%,rgba(4,44,47,.57)),linear-gradient(0deg,rgba(4,44,47,.85),transparent 45%)}
+.hp-contact-inner{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:100px 0 90px}
+.hp-contact h2{font-size:clamp(3.6rem,6.3vw,6.4rem);line-height:1.04;max-width:1000px}
+.hp-contact p{font-size:1rem;line-height:1.7;color:rgba(248,245,237,.85);margin:1.8rem 0 2.4rem}
+
+@media(max-width:1150px){.hp-hero-copy{width:62%}}
+@media(max-width:850px){
+  .hp-wrap,.hp-hero-inner{width:calc(100% - 60px)}
+  .hp-hero-copy{width:72%}
+  .hp-recog-top{gap:40px}
+  .hp-vision-inner{width:calc(100% - 60px)}
+  .hp-vision,.hp-vision .hp-photo{min-height:650px}
+  .hp-card{padding:27px 24px;min-height:390px}.hp-card h3{font-size:2.2rem}
+  .hp-about-copy{padding:60px 35px}
+  .hp-about,.hp-about .hp-photo{min-height:640px}
+}
+@media(max-width:640px){
+  .hp-wrap,.hp-hero-inner,.hp-vision-inner{width:calc(100% - 40px)}
+  .hp-eyebrow{font-size:.62rem;margin-bottom:1.6rem}
+  .hp-hero{height:100svh;min-height:720px;max-height:940px;align-items:flex-end}
+  .hp-hero-photo{object-position:37% 40%;filter:brightness(.68) saturate(.6)}
+  .hp-hero-wash{background:linear-gradient(0deg,rgba(4,44,47,.98) 0%,rgba(4,44,47,.9) 32%,rgba(4,44,47,.25) 66%,rgba(4,44,47,.5) 100%)}
+  .hp-hero-inner{padding:0 0 95px}
+  .hp-hero-copy{width:100%;padding:0}
+  .hp-hero h1{font-size:clamp(2.7rem,11vw,4rem);line-height:1.1}
+  .hp-hero .hp-line{margin:1.6rem 0 1.7rem}
+  .hp-edge{display:none}
+  .hp-recog{padding:4.9rem 0 4.4rem}
+  .hp-recog-top{display:block;margin-bottom:3rem}
+  .hp-recog h2{font-size:clamp(2.6rem,10vw,3.6rem)}
+  .hp-intro{margin-top:1.6rem;font-size:.95rem;max-width:none}
+  .hp-areas{grid-template-columns:1fr}
+  .hp-area,.hp-area+.hp-area{padding:1.4rem 0 1.5rem;border-right:0;border-bottom:1px solid rgba(4,44,47,.16)}
+  .hp-area:last-child{border-bottom:0}
+  .hp-area h3{margin:.5rem 0;font-size:1.7rem}
+  .hp-vision{grid-template-columns:1fr;min-height:0}
+  .hp-vision-copy{padding:4.75rem 0 4.4rem}
+  .hp-vision h2{font-size:clamp(2.6rem,10vw,3.6rem)}
+  .hp-vision .hp-line,.hp-about .hp-line{margin:1.9rem 0 1.5rem}
+  .hp-vision p,.hp-about p{font-size:.95rem}
+  .hp-vision .hp-photo{min-height:420px;height:420px}
+  .hp-vision .hp-photo img{object-position:center 48%}
+  .hp-persp{min-height:560px}
+  .hp-persp-inner{padding:80px 20px}
+  .hp-persp h2{font-size:clamp(2.6rem,10.5vw,3.8rem)}
+  .hp-persp .hp-line{margin:2.1rem auto 1.4rem}
+  .hp-persp p{font-size:.9rem}
+  .hp-head{display:block}
+  .hp-head h2{font-size:clamp(2.6rem,10vw,3.6rem)}
+  .hp-head>p{margin-top:1.25rem;padding:0;font-size:.95rem}
+  .hp-offer{padding:4.7rem 0 5.1rem}
+  .hp-offer .hp-head{margin-bottom:2rem}
+  .hp-offer-grid{grid-template-columns:1fr;gap:12px}
+  .hp-card{min-height:0;padding:24px 26px 28px;display:grid;grid-template-columns:78px 1fr;grid-template-rows:auto auto auto;gap:0 22px}
+  .hp-card-id{grid-column:2;grid-row:1}
+  .hp-card img{grid-column:1;grid-row:1/4;width:78px;height:80px;margin:0;align-self:center}
+  .hp-card h3{grid-column:2;grid-row:2;margin:.6rem 0 .4rem;font-size:2rem}
+  .hp-card p{grid-column:2;grid-row:3;font-size:.78rem}
+  .hp-card-arrow{right:22px;bottom:20px;font-size:1.15rem}
+  .hp-method{padding:4.8rem 0 5.2rem}
+  .hp-steps{display:block;margin-top:2.7rem}
+  .hp-step{display:grid;grid-template-columns:52px 1fr;gap:0 20px;margin-bottom:1.4rem}
+  .hp-step-head{grid-row:1/3;grid-column:1;display:block;margin:0}
+  .hp-step-head span{width:52px;height:52px}
+  .hp-step-head i{display:none}
+  .hp-step h3{grid-row:1;grid-column:2;font-size:1.7rem;margin-bottom:.25rem}
+  .hp-step p{grid-row:2;grid-column:2}
+  .hp-method .textlink{margin-top:1.5rem}
+  .hp-proof{padding:4.7rem 0 2.9rem}
+  .hp-proof-inner{min-height:500px}
+  .hp-proof blockquote{font-size:clamp(1.6rem,6.8vw,2.2rem)}
+  .hp-quote-mark{font-size:70px;height:50px}
+  .hp-attrib{margin-top:1.6rem;font-size:.56rem}
+  .hp-proof-bottom{display:block}
+  .hp-proof-bottom .textlink{margin-top:1.2rem}
+  .hp-about{grid-template-columns:1fr;min-height:0}
+  .hp-about .hp-photo{height:390px;min-height:390px}
+  .hp-about .hp-photo img{object-position:54% 40%}
+  .hp-about-copy{padding:4.7rem 20px 5.1rem}
+  .hp-about h2{font-size:clamp(3.2rem,13vw,4.6rem)}
+  .hp-contact{min-height:690px}
+  .hp-contact-bg{object-position:61% center}
+  .hp-contact-inner{padding:86px 0 80px}
+  .hp-contact h2{font-size:clamp(2.9rem,11.5vw,4.4rem)}
+  .hp-contact p{font-size:.9rem;max-width:315px}
+}
+
 </style>
 <!-- CMS:THEMECSS:END -->
 </head>
